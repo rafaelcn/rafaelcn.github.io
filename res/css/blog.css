@@ -1,0 +1,78 @@
+/**
+ * Website CSS
+ */
+
+ul {
+  list-style: none;
+}
+
+ul > li {
+  display: inline-block;
+}
+
+a {
+  color: rgba(87, 136, 72, 1);
+  text-decoration: none !important;
+
+  -webkit-transition: all .2s ease-in;
+     -moz-transition: all .2s ease-in;
+       -o-transition: all .2s ease-in;
+}
+
+a:hover {
+  color: rgba(26, 112, 0, 1);
+  /*background-color: rgba(65, 171, 101, 0.19);*/
+}
+
+a:focus {
+  color: rgba(19, 79, 1, 1);
+}
+
+footer {
+  border-top: 1px solid #ccc;
+  background-color: #f2f2f2;
+  padding: 4%;
+}
+
+.nav {
+  height: 60px;
+  font-size: 25px;
+  margin-bottom: 50px;
+  background: rgba(255, 255, 255, 1);
+  border-bottom: 3px solid rgba(82, 172, 99, 1);
+}
+
+.nav > ul > li {
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  -webkit-transition: all .2s;
+     -moz-transition: all .2s;
+       -o-transition: all .2s;
+}
+
+.nav > ul > li > a {
+  padding: 14px;
+}
+
+.active {
+  /*border-bottom: 3px solid rgba(82, 172, 99, 1) !important;*/
+  font-weight: bold;
+}
+
+.blog-post {
+  border-radius: 2px;
+  width: 100%;
+  height: ;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: #f2f2f2;
+}
+
+.blog-post > * {
+  padding: 20px;
+}
+
+.text-right {
+  text-align: right;
+}
