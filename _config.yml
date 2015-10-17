@@ -1,0 +1,7 @@
+markdown: kramdown
+
+navigation:
+- text: blog
+  url: /index.html
+- text: about
+  url: /about.html
