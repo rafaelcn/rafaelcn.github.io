@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Blog
 ---
 
@@ -10,11 +10,16 @@ title: Blog
       <h5 class="blog-info">
         {{ post.date | date_to_long_string }}
         <span class="post-language" >
+          {% assign Language = 'nil' %}
+          {% assign Title = 'nil' %}
           {% if post.language == 'portuguese' %}
-            <i class="fa fa-language" title="Este artigo está escrito em Português"> Portuguese</i>
+              {% assign Title = 'Este artigo está escrito em Português' %}
+              {% assign Language = ' Portuguese' %}
           {% else %}
-            <i class="fa fa-language" title="This article is written in English"> English</i>
+            {% assign Title='This article is written in English' %}
+            {% assign Language = ' English' %}
           {% endif %}
+          <i class="fa fa-language" title="{{ Title }}">{{ Language }}</i>
         </span>
       </h5>
       <h2>
