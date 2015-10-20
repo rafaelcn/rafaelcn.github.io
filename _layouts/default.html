@@ -27,7 +27,7 @@
             <ul>
               {% for link in site.navigation %}
                 {% assign current = 'nil' %}
-                {% if link.url == page.url or () %}
+                {% if link.url == page.url or (page.snippet and link.url == '/index.html') %}
                   {% assign current = 'active' %}
                 {% endif %}
                 <li><a class="{{ current }}" href="{{ link.url }}">{{ link.text }}</a></li>
@@ -36,27 +36,33 @@
           </nav>
         </div>
 
-          </nav>
+        <div class="row content">
+          <div class="container-fluid">
+              {{ content }}
+          </div>
+
         </div>
-
-      </div>
-
-      <div class="container">
-        {{ content }}
       </div>
 
       <footer class="container-fluid footer">
         <ul class="text-center list-social">
-          <li><a href="mailto:rafaelnunes737@hotmail.com" title="Contact me."><i class="fa fa-3x fa-envelope"></i></a></li>
-          <li><a href="https://github.com/rafaelcn" title="rafaelcn @ Github."><i class="fa fa-3x fa-github"></i></a></li>
+          <li>
+            <a href="mailto:rafaelnunes737@hotmail.com" title="Contact me.">
+                <i class="fa fa-envelope"></i>
+            </a>
+          </li>
+          <li><a href="https://github.com/rafaelcn" title="rafaelcn @ Github."><i class="fa fa-github-alt"></i></a></li>
           <li><a><i class=""></i></a></li>
         </ul>
 
         <p class="text-center">
-          I cannot deny, I was greatly inspired by <a href="http://robotlolita.me/index.html">Quil's blog.</a>
-        </p>
+          I cannot deny, I was greatly inspired by <a href="http://robotlolita.me/index.html">Quil's blog</a>.
+        </p><br>
         <p class="text-center">
-          <a href="#" title="Work licensed under Creative Commons"><i class="fa fa-2x fa-creative-commons"></i></a>
+          <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+            <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+          </a>
+          <br>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
         </p>
       </footer>
 
