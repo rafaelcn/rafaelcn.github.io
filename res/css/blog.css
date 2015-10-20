@@ -64,7 +64,7 @@ footer a:hover {
   font-size: 25px;
   margin-bottom: 50px;
   background: rgba(255, 255, 255, 1);
-  border-bottom: 1px solid rgba(73, 141, 91, 1);
+  border-bottom: 1px solid rgba(74, 142, 92, 0.2);
 }
 
 .nav > ul > li {
