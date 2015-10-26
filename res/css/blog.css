@@ -148,6 +148,16 @@ footer a:hover {
   margin-bottom: 25px;
 }
 
+.no-post {
+  padding: 10%;
+  border-radius: 2px;
+  text-align: center !important;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: rgba(61, 148, 83, 0.1);
+}
+
 .list-social {
   font-size: 20px;
   margin-bottom: 40px;
