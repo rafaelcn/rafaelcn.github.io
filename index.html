@@ -30,4 +30,10 @@ title: Blog
       </h4>
     </li>
   {% endfor %}
+
+  {% if (site.posts | size) == 0 %}
+    <li class="no-post">
+      <h2>No posts found, yet. Comeback later. <i class="fa fa-smile-o"></i></h2>
+    </li>
+  {% endif %}
 </ul>
