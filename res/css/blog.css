@@ -63,7 +63,11 @@ footer a:hover {
   height: 60px;
   font-size: 25px;
   margin-bottom: 50px;
-  background: rgba(255, 255, 255, 1);
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.5),
+      rgba(68, 127, 92, 0.2)
+    ); 
   border-bottom: 1px solid rgba(74, 142, 92, 0.2);
 }
 
@@ -71,9 +75,9 @@ footer a:hover {
   cursor: pointer;
   padding-top: 10px;
   padding-bottom: 10px;
-  -webkit-transition: all .2s;
-     -moz-transition: all .2s;
-       -o-transition: all .2s;
+  -webkit-transition: all .5s;
+     -moz-transition: all .5s;
+       -o-transition: all .5s;
 }
 
 .nav > ul > li > a {
@@ -87,7 +91,7 @@ footer a:hover {
 }
 
 .active {
-  border-bottom: 3px solid rgba(73, 141, 91, 1) !important;
+  border-bottom: 4px solid rgba(73, 141, 91, 1) !important;
   font-weight: bold;
 }
 
