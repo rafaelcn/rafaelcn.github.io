@@ -31,7 +31,9 @@ title: Blog
     </li>
   {% endfor %}
 
-  {% if (site.posts | size) == 0 %}
+  {% capture posts_number %}{{ site.posts | size }}{% endcapture %}
+
+  {% if posts_number == '0' %}
     <li class="no-post">
       <h2>No posts found, yet. Comeback later. <i class="fa fa-smile-o"></i></h2>
     </li>
