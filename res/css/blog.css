@@ -23,8 +23,9 @@ a {
 }
 
 a:hover {
-  color: rgba(73, 141, 91, 1);
-  /*background-color: rgba(65, 171, 101, 0.19);*/
+  color: white;
+  padding: 2px;
+  background-color: #27ae60;
 }
 
 a:focus {
@@ -32,22 +33,25 @@ a:focus {
 }
 
 footer {
-  border-top: 1px solid #ccc;
-  background-color: #f2f2f2;
+  background: rgba(39, 174, 96, 1);
+  color: rgba(236, 240, 241, 1);
+  margin-top: 50px;
   position: absolute;
   width: 100%;
   padding: 2%;
 }
 
 footer a {
-  color: rgba(111, 108, 113, 0.69) !important;
+  color: rgba(236, 240, 241, 1);
   -webkit-transition: all .1s;
      -moz-transition: all .1s;
        -o-transition: all .1s;
 }
 
 footer a:hover {
-  color: rgba(111, 108, 113, 0.9) !important;
+  color: rgba(50, 50, 50, 1) !important;
+  padding: 0 !important;
+  background: none !important;
 }
 
 .container-fluid {
@@ -63,36 +67,30 @@ footer a:hover {
   height: 60px;
   font-size: 25px;
   margin-bottom: 50px;
-  background: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.5),
-      rgba(68, 127, 92, 0.2)
-    ); 
-  border-bottom: 1px solid rgba(74, 142, 92, 0.2);
+  background: rgba(39, 174, 96, 1);
 }
 
 .nav > ul > li {
   cursor: pointer;
   padding-top: 10px;
-  padding-bottom: 10px;
-  -webkit-transition: all .5s;
-     -moz-transition: all .5s;
-       -o-transition: all .5s;
+  padding-bottom: 15px;
 }
 
 .nav > ul > li > a {
   padding: 14px;
-  color: rgba(73, 141, 91, 1);
+  color: white;
+  -webkit-transition: all .15s;
+     -moz-transition: all .15s;
+       -o-transition: all .15s;
 }
 
 .nav > ul > li > a:hover {
-  color: rgba(56, 115, 71, 1);
-  text-shadow: 1px 1px 3px rgba(61, 148, 83, 0.1);
+  box-shadow: 0 5px 0 white;
 }
 
 .active {
-  border-bottom: 4px solid rgba(73, 141, 91, 1) !important;
   font-weight: bold;
+  box-shadow: 0 5px 0 white;
 }
 
 .blog-posts > .blog-post {
@@ -104,15 +102,17 @@ footer a:hover {
   width: 100%;
   margin-top: 10px;
   margin-bottom: 10px;
-  background: #f2f2f2;
+  background: rgba(236, 240, 241, 1);
 }
 
 .blog-post a {
-  color: rgba(73, 141, 91, 1) !important;
+  color: rgba(39, 174, 96, 1) !important;
 }
 
 .blog-post a:hover {
   text-decoration: underline !important;
+  background: none !important;
+  padding: 0 !important;
 }
 
 .blog-info {
@@ -159,7 +159,7 @@ footer a:hover {
   width: 100%;
   margin-top: 10px;
   margin-bottom: 10px;
-  background: rgba(61, 148, 83, 0.1);
+  background: rgba(46, 204, 113, .2);
 }
 
 .list-social {
@@ -182,4 +182,40 @@ footer a:hover {
 
 .text-center {
   text-align: center;
+}
+
+.text-big {
+  font-size: 17px;
+}
+
+.alert-info {
+  padding: 1%;
+  color: white;
+  cursor: default;
+  border-radius: 2px;
+  background: rgba(52, 152, 219,1.0);
+}
+
+.alert-success {
+  padding: 1%;
+  color: white;
+  cursor: default;
+  border-radius: 2px;
+  background: rgba(46, 204, 113,1.0)
+}
+
+.alert-danger {
+  padding: 1%;
+  color: white;
+  cursor: default;
+  border-radius: 2px;
+  background: rgba(231, 76, 60,1.0);
+}
+
+.alert-warning {
+  padding: 1%;
+  color: white;
+  cursor: default;
+  border-radius: 2px;
+  background: rgba(241, 196, 15,1.0);
 }
