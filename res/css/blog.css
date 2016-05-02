@@ -88,11 +88,6 @@ footer a:hover {
   box-shadow: 0 5px 0 white;
 }
 
-.active {
-  font-weight: bold;
-  box-shadow: 0 5px 0 white;
-}
-
 .blog-posts > .blog-post {
   padding: 10px;
 }

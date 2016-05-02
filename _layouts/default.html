@@ -28,10 +28,6 @@
           <nav class="nav">
             <ul>
               {% for link in site.navigation %}
-                {% assign current = 'nil' %}
-                {% if link.url == page.url or (page.snippet and link.url == '/index.html') %}
-                  {% assign current = 'active' %}
-                {% endif %}
                 <li><a class="{{ current }}" href="{{ link.url }}">{{ link.text }}</a></li>
               {% endfor %}
             </ul>
