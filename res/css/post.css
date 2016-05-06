@@ -1,9 +1,10 @@
 body {
     color: white;
-    background: rgb(50, 50, 50);
+    background: rgb(50, 50, 50) !important;
+    background-image: url('/res/img/post-background.png') !important;
 }
 
 .nav > ul > li > a:hover {
     background: rgb(50, 50, 50) !important;
-    box-shadow: 0 5px 0 rgb(50, 50, 50) !important;
+    background-image: url('/res/img/post-background.png') !important;
 }
