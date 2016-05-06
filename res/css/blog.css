@@ -85,6 +85,8 @@ footer a:hover {
 }
 
 .nav > ul > li > a:hover {
+  background: white;
+  color: rgba(39, 174, 96, 1);
   box-shadow: 0 5px 0 white;
 }
 
@@ -143,6 +145,10 @@ footer a:hover {
   font-weight: lighter;
 }
 
+.post-text > .post-content::first-line {
+  margin-left: 15px !important;
+}
+
 .post-header {
   margin-bottom: 25px;
 }
@@ -183,34 +189,36 @@ footer a:hover {
   font-size: 17px;
 }
 
-.alert-info {
+.alert {
   padding: 1%;
   color: white;
   cursor: default;
   border-radius: 2px;
+}
+
+.alert > a {
+  color: white !important;
+  text-decoration: underline !important;
+}
+
+.alert > a:hover {
+  color: rgba(50, 50, 50, 1) !important;
+  background: none !important;
+  padding: 0 !important;
+}
+
+.alert-info {
   background: rgba(52, 152, 219,1.0);
 }
 
 .alert-success {
-  padding: 1%;
-  color: white;
-  cursor: default;
-  border-radius: 2px;
-  background: rgba(46, 204, 113,1.0)
+  background: rgba(46, 204, 113,1.0);
 }
 
 .alert-danger {
-  padding: 1%;
-  color: white;
-  cursor: default;
-  border-radius: 2px;
   background: rgba(231, 76, 60,1.0);
 }
 
 .alert-warning {
-  padding: 1%;
-  color: white;
-  cursor: default;
-  border-radius: 2px;
   background: rgba(241, 196, 15,1.0);
 }
