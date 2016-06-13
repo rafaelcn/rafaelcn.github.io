@@ -166,13 +166,14 @@ footer a:hover {
 }
 
 .no-post {
+  color: white;
   padding: 10%;
   border-radius: 2px;
   text-align: center !important;
   width: 100%;
   margin-top: 10px;
   margin-bottom: 10px;
-  background: rgba(46, 204, 113, .2);
+  background: rgba(46, 204, 113, 1);
 }
 
 .list-social {
