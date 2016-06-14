@@ -24,10 +24,10 @@
 
     <body>
       <img src="/res/img/background.jpg" class="background-image" />
-      <div class="container-fluid">
+      <div>
         <div class="row">
           <nav class="nav">
-            <ul>
+            <ul class="">
               {% for link in site.navigation %}
                 <li><a class="{{ current }}" href="{{ link.url }}">{{ link.text }}</a></li>
               {% endfor %}
@@ -36,10 +36,9 @@
         </div>
 
         <div class="row content">
-          <div class="container-fluid">
+          <div class="container-fluid" id="content">
               {{ content }}
           </div>
-
         </div>
       </div>
 
@@ -68,6 +67,10 @@
 
         ga('create', 'UA-68972864-1', 'auto');
         ga('send', 'pageview');
+      </script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+      <script type="text/javascript">
+        $('#content').delay(100).fadeIn(600)
       </script>
     </body>
 </html>
