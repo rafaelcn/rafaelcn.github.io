@@ -76,7 +76,7 @@ footer a:hover {
   height: 60px;
   font-size: 25px;
   margin-bottom: 50px;
-  background: inherit;
+  background: transparent;
 }
 
 .nav > ul > li {
@@ -88,7 +88,7 @@ footer a:hover {
 .nav > ul > li > a {
   outline: 0;
   color: white;
-  padding: 18px;
+  padding: 13px;
   -webkit-transition: all .25s ease-in-out;
      -moz-transition: all .25s ease-in-out;
        -o-transition: all .25s ease-in-out;
@@ -97,6 +97,8 @@ footer a:hover {
 .nav > ul > li > a:hover {
   color: white;
   background: inherit;
+  box-shadow: 0 5px 0 0 rgba(39, 174, 96, 1);
+  -webkit-box-shadow: 0 5px 0 0 rgba(39, 174, 96, 1);
 }
 
 .blog-posts > .blog-post {
