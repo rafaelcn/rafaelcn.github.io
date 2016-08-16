@@ -31,6 +31,7 @@
               {% for link in site.navigation %}
                 <li><a class="{{ current }}" href="{{ link.url }}">{{ link.text }}</a></li>
               {% endfor %}
+              <li style="float:right;margin-right:40px;"><noscript style="font-size:17px !important;" class="alert alert-warning">This website needs javascript to work properly.</noscript></li>
             </ul>
           </nav>
         </div>
@@ -41,7 +42,7 @@
           </div>
         </div>
       </div>
-
+      
       <footer class="container-fluid footer">
         <ul class="text-center list-social">
           <li><a href="mailto:rafaelnunes737@hotmail.com" title="Contact me."><i class="fa fa-envelope"></i></a></li>
@@ -70,7 +71,7 @@
       </script>
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
       <script type="text/javascript">
-        $('#content').delay(100).fadeIn(600)
+        $('#content').hide(0).delay(100).fadeIn(600)
       </script>
     </body>
 </html>
