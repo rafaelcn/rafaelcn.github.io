@@ -23,11 +23,11 @@
     </head>
 
     <body>
-      <img src="/res/img/background.jpg" class="background-image" />
-      <div>
+      <!-- <img src="/res/img/background.jpg" class="background-image" /> -->
+      <div class="wrapper">
         <div class="row">
-          <nav class="nav">
-            <ul class="">
+          <nav class="nav" style="margin-left:3%;">
+            <ul class="list-unstyled list-inline">
               {% for link in site.navigation %}
                 <li><a class="{{ current }}" href="{{ link.url }}">{{ link.text }}</a></li>
               {% endfor %}
@@ -43,9 +43,9 @@
         </div>
       </div>
       
-      <footer class="container-fluid footer">
-        <ul class="text-center list-social">
-          <li><a href="mailto:rafaelnunes737@hotmail.com" title="Contact me."><i class="fa fa-envelope"></i></a></li>
+      <footer class="footer">
+        <ul class="text-center list-social list-unstyled list-inline">
+          <li><a href="mailto:rafaelnunes@engineer.com" title="Contact me."><i class="fa fa-envelope"></i></a></li>
           <li><a href="https://github.com/rafaelcn" title="rafaelcn @ Github."><i class="fa fa-github-alt"></i></a></li>
           <li><a href="http://stackoverflow.com/users/2763060/rafael-nunes" title="rafaelcn @ StackOverflow."><i class="fa fa-stack-overflow"></i></a></li>
           <li><a><i class=""></i></a></li>
@@ -59,7 +59,7 @@
         </p>
       </footer>
 
-      <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
       <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -68,10 +68,6 @@
 
         ga('create', 'UA-68972864-1', 'auto');
         ga('send', 'pageview');
-      </script>
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
-      <script type="text/javascript">
-        $('#content').hide(0).delay(100).fadeIn(600)
       </script>
     </body>
 </html>

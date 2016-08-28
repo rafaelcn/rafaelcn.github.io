@@ -8,14 +8,11 @@
 
 body {
   background-size: cover;
+  background: #333;
 }
 
-ul {
-  list-style: none;
-}
-
-ul > li {
-  display: inline-block;
+html, body {
+  height: 100%;
 }
 
 a {
@@ -39,11 +36,9 @@ a:focus {
 footer {
   background: rgba(39, 174, 96, 1);
   color: rgba(236, 240, 241, 1);
-  margin-top: 100px;
   position: absolute;
-  height: 225px;
   width: 100%;
-  padding: 10px;
+  height: 225px;
 }
 
 footer a {
@@ -239,4 +234,18 @@ footer a:hover {
 
 .alert-warning {
   background: rgba(241, 196, 15,1.0);
+}
+
+.wrapper {
+  min-height: 100%;
+  position:relative;
+}
+
+.gap {
+  margin-top: 150px;
+}
+
+#content > ul {
+  list-style: none;
+  padding-bottom: 50px;
 }

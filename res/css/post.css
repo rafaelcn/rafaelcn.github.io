@@ -1,6 +1,5 @@
 body {
-    color: black;
-    background: rgb(250, 250, 250) !important;
+    background: #333 !important;
 }
 
 .nav > ul > li > a:hover {
