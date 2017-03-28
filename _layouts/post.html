@@ -21,7 +21,7 @@ layout: default
   <div class="post-text">
     <ul class="list-unstyled list-inline share-buttons">
       <li><a id="fb-share" class="share share-facebook" href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
-      <li><a id="tt-share" href="https://twitter.com/share" class="share share-twitter" data-size="large" data-via="rafaellnunees" data-show-count="false"><i class="fa fa-twitter"></i> Tweet</a></li>
+      <li><a id="tt-share" href="https://twitter.com/intent/tweet?text={{page.title}}+rafaelcn.github.io{{page.url}}" class="share share-twitter" data-size="large" data-via="rafaellnunees" data-show-count="false"><i class="fa fa-twitter"></i> Tweet</a></li>
       <li><a id="in-share" class="share share-linkedin" href="#"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
     </ul>
     {{ content }}
@@ -40,18 +40,16 @@ layout: default
     }
 	  
     in_button.onclick = function() {
-      linkedin_share('rafaelcn.github.io/{{page.url}}', '{{page.title}}', '{{page.snippet}}', '', '520', '350')  
+      linkedin_share('rafaelcn.github.io/{{page.url}}', '{{page.title}}', '{{page.snippet}}')  
     }
     
-    function facebook_share(url, title, desc, image, winWidth, winHeight) {
-      var winTop = (screen.height / 2) - (winHeight / 2)
-      var winLeft = (screen.width / 2) - (winWidth / 2)
-      window.open('http://www.facebook.com/sharer.php?s=100&p[title]=' + title + '&p[summary]=' + desc + '&p[url]=' + url + '&p[images][0]=' + image, 'sharer', 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width='+winWidth+',height='+winHeight);
+    function facebook_share(url, title, desc, image, width, height) {
+      var win_top = (screen.height / 2) - (width / 2)
+      var win_left = (screen.width / 2) - (height / 2)
+      window.open('http://www.facebook.com/sharer.php?s=100&p[title]=' + title + '&p[summary]=' + desc + '&p[url]=' + url + '&p[images][0]=' + image, 'sharer', 'top=' + win_top + ',left=' + win_left + ',toolbar=0,status=0,width='+width+',height='+height);
     }
 
-    function linkedin_share(url, title, desc, image, winWidth, winHeight) {
-      var winTop = (screen.height / 2) - (winHeight / 2)
-      var winLeft = (screen.width / 2) - (winWidth / 2)
+    function linkedin_share(url, title, desc) {
       window.open('https://www.linkedin.com/shareArticle?mini=true&url='+ url +'&title='+ title + '&summary='+ desc +'&source=');
     }    
   </script>
