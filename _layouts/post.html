@@ -20,9 +20,9 @@ layout: default
 
   <div class="post-text">
     <ul class="list-unstyled list-inline share-buttons">
-      <li><a id="fb-share" class="share share-facebook" href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
-      <li><a id="tt-share" href="https://twitter.com/intent/tweet?text={{page.title}}+rafaelcn.github.io{{page.url}}" class="share share-twitter" data-size="large" data-via="rafaellnunees" data-show-count="false"><i class="fa fa-twitter"></i> Tweet</a></li>
-      <li><a id="in-share" class="share share-linkedin" href="#"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+      <li><button id="fb-share" class="share share-facebook"><i class="fa fa-facebook"></i> Facebook</button></li>
+      <li><button id="tt-share" class="share share-twitter"><i class="fa fa-twitter"></i> Tweet</button></li>
+      <li><button id="in-share" class="share share-linkedin"><i class="fa fa-linkedin"></i> LinkedIn</button></li>
     </ul>
     {{ content }}
 
@@ -34,6 +34,7 @@ layout: default
   <script>
     var fb_button = document.getElementById('fb-share')
     var in_button = document.getElementById('in-share')
+    var tt_button = document.getElementById('tt-share')
     
     fb_button.onclick = function() {
       facebook_share('rafaelcn.github.io/{{page.url}}', '{{page.title}}', '{{page.snippet}}', '', '520', '350')    
@@ -41,6 +42,10 @@ layout: default
 	  
     in_button.onclick = function() {
       linkedin_share('rafaelcn.github.io/{{page.url}}', '{{page.title}}', '{{page.snippet}}')  
+    }
+
+    tt_button.onclick = function() {
+      window.open("https://twitter.com/intent/tweet?text={{page.title}}+rafaelcn.github.io{{page.url}}+by+@rafaellnunees")
     }
     
     function facebook_share(url, title, desc, image, width, height) {

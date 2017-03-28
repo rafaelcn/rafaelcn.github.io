@@ -255,11 +255,16 @@ footer a:hover {
 }
 
 .share {
-  border-radius: 3px;
   padding: 8px;
+  color: white;
+  border: none;
   font-size: 17px;
   line-height: 26px;
-  color: white;
+  border-radius: 3px;
+  background: inherit;
+  -webkit-transition: all .25s ease-in-out;
+     -moz-transition: all .25s ease-in-out;
+       -o-transition: all .25s ease-in-out;
 }
 
 .share-facebook {
