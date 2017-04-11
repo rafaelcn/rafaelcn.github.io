@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/ranu
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://rafaelcn.github.io
+  * I am ranu (https://keybase.io/ranu) on keybase.
+  * I have a public key ASDZhJ8ZkZ9Oyl0BX1nEBJAiqk_bJJ7IhUk8t9ey8YWTPAo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "010100c32d393e1afb012cd4cbf1face1e59686bb640749969f07924f507aad0e6530a",
+            "host": "keybase.io",
+            "kid": "0120d9849f19919f4eca5d015f59c4049022aa4fdb249ec885493cb7d7b2f185933c0a",
+            "uid": "0468c008fa393856900c0a31e24c9f19",
+            "username": "ranu"
+        },
+        "service": {
+            "hostname": "rafaelcn.github.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.20"
+    },
+    "ctime": 1491876422,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1491876410,
+        "hash": "b4c86d1ee84a48af8e95ce5186e120ec1580db6b79daeead6b337846e1ba5abcad8f6a2f75f2e4fb01a467531a1678a6f55687b6626322cc84f1a0f8f8e4ccc1",
+        "seqno": 1011638
+    },
+    "prev": "9ff0cd550aeedb0c72852e58436821508d2b9f836ca0d014be69a0cd1e37f46c",
+    "seqno": 10,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg2YSfGZGfTspdAV9ZxASQIqpP2ySeyIVJPLfXsvGFkzwKp3BheWxvYWTFAvh7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxMDBjMzJkMzkzZTFhZmIwMTJjZDRjYmYxZmFjZTFlNTk2ODZiYjY0MDc0OTk2OWYwNzkyNGY1MDdhYWQwZTY1MzBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZDk4NDlmMTk5MTlmNGVjYTVkMDE1ZjU5YzQwNDkwMjJhYTRmZGIyNDllYzg4NTQ5M2NiN2Q3YjJmMTg1OTMzYzBhIiwidWlkIjoiMDQ2OGMwMDhmYTM5Mzg1NjkwMGMwYTMxZTI0YzlmMTkiLCJ1c2VybmFtZSI6InJhbnUifSwic2VydmljZSI6eyJob3N0bmFtZSI6InJhZmFlbGNuLmdpdGh1Yi5pbyIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjIwIn0sImN0aW1lIjoxNDkxODc2NDIyLCJleHBpcmVfaW4iOjUwNDU3NjAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0OTE4NzY0MTAsImhhc2giOiJiNGM4NmQxZWU4NGE0OGFmOGU5NWNlNTE4NmUxMjBlYzE1ODBkYjZiNzlkYWVlYWQ2YjMzNzg0NmUxYmE1YWJjYWQ4ZjZhMmY3NWYyZTRmYjAxYTQ2NzUzMWExNjc4YTZmNTU2ODdiNjYyNjMyMmNjODRmMWEwZjhmOGU0Y2NjMSIsInNlcW5vIjoxMDExNjM4fSwicHJldiI6IjlmZjBjZDU1MGFlZWRiMGM3Mjg1MmU1ODQzNjgyMTUwOGQyYjlmODM2Y2EwZDAxNGJlNjlhMGNkMWUzN2Y0NmMiLCJzZXFubyI6MTAsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAaC9ky2urJP/cptvfOT9jJEnhiEVLLcxkXqlXcKPUA/BlTVWSnw7XHMo22uLDB6r9+aYY/lf+nnpyODJep6GnCKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIJZVStNx+mmfvNwn7ZUbYyRt+hxGitcfRkoWdQQYKjnUo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/ranu
+
+==================================================================
