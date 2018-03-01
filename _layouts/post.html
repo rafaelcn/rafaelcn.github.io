@@ -19,13 +19,14 @@ layout: default
   </header>
 
   <div class="post-text">
+    {{ content }}
+
+
     <ul class="list-unstyled list-inline share-buttons">
       <li><button id="fb-share" class="share share-facebook"><i class="fa fa-facebook"></i> Facebook</button></li>
       <li><button id="tt-share" class="share share-twitter"><i class="fa fa-twitter"></i> Tweet</button></li>
       <li><button id="in-share" class="share share-linkedin"><i class="fa fa-linkedin"></i> LinkedIn</button></li>
     </ul>
-    {{ content }}
-
 
     <hr style="border: 2px solid #333;border-radius:2px;">
     <div id="disqus_thread"></div>
@@ -35,19 +36,19 @@ layout: default
     var fb_button = document.getElementById('fb-share')
     var in_button = document.getElementById('in-share')
     var tt_button = document.getElementById('tt-share')
-    
+
     fb_button.onclick = function() {
-      facebook_share('rafaelcn.github.io/{{page.url}}', '{{page.title}}', '{{page.snippet}}', '', '520', '350')    
+      facebook_share('rafaelcn.github.io/{{page.url}}', '{{page.title}}', '{{page.snippet}}', '', '520', '350')
     }
-	  
+
     in_button.onclick = function() {
-      linkedin_share('rafaelcn.github.io/{{page.url}}', '{{page.title}}', '{{page.snippet}}')  
+      linkedin_share('rafaelcn.github.io/{{page.url}}', '{{page.title}}', '{{page.snippet}}')
     }
 
     tt_button.onclick = function() {
       window.open("https://twitter.com/intent/tweet?text={{page.title}}+rafaelcn.github.io{{page.url}}+by+@rafaellnunees")
     }
-    
+
     function facebook_share(url, title, desc, image, width, height) {
       var win_top = (screen.height / 2) - (width / 2)
       var win_left = (screen.width / 2) - (height / 2)
@@ -56,7 +57,7 @@ layout: default
 
     function linkedin_share(url, title, desc) {
       window.open('https://www.linkedin.com/shareArticle?mini=true&url='+ url +'&title='+ title + '&summary='+ desc +'&source=');
-    }    
+    }
   </script>
   <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   <script>
