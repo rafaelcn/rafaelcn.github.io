@@ -86,9 +86,9 @@ footer a:hover {
   color: white;
   padding: 5px;
   border: 1px solid transparent;
-  -webkit-transition: all .25s ease-in-out;
-     -moz-transition: all .25s ease-in-out;
-       -o-transition: all .25s ease-in-out;
+  -webkit-transition: all .10s ease-in-out;
+     -moz-transition: all .10s ease-in-out;
+       -o-transition: all .10s ease-in-out;
 }
 
 .nav > ul > li > a:hover {
