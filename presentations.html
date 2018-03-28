@@ -1,0 +1,37 @@
+---
+layout: default
+title: Presentations
+---
+
+<link rel="stylesheet" href="/res/css/presentations.css">
+
+<div class="post-text">
+  <p>
+    Here you can find a list of slides of my previous presentations in events.
+    Yes I work with .pptx files by using WPS office. If I export the old .pptx
+    version of the presentation to .pdf some slides might be scrambled due to
+    the use of some animations.
+  </p>
+
+  <p>
+    For now I will let it be, and use <i>beamer</i> to create my presentations.
+  </p>
+</div>
+
+{% assign slides = site.static_files %}
+
+{% for slide in slides %}
+{% if slide.extname == ".pptx" %}
+<div class="blog-post">
+  <li class="presentation-post">
+    {% assign basename = slide.path | split: "/"%}
+    <b>{{ basename.last | split: "." | first }}</b>.
+    <i>Last modified on: {{ slide.modified_time | date: "%d of %b, %y." }}</i>
+
+    <a href="{{ slide.path }}" class="pull-right" title="Download this presentation">
+      <i class="fa fa-2x fa-download"></i>
+    </a>
+  </li>
+</div>
+{% endif %}
+{% endfor %}

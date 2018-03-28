@@ -3,3 +3,12 @@ navigation:
   url: /index.html
 - text: about
   url: /about.html
+- text: presentations
+  url: /presentations.html
+
+
+defaults:
+  - scope:
+      path: "assets/slides/"
+    values:
+      is_slide: true
