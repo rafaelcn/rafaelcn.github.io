@@ -8,7 +8,7 @@
 
 body {
   background-size: cover;
-  background: #333;
+  background: rgb(241, 241, 241);
 }
 
 html, body {
@@ -83,7 +83,7 @@ footer a:hover {
 
 .nav > ul > li > a {
   outline: 0;
-  color: white;
+  color: rgb(90, 90, 90);
   padding: 5px;
   border: 1px solid transparent;
   -webkit-transition: all .10s ease-in-out;
@@ -92,7 +92,7 @@ footer a:hover {
 }
 
 .nav > ul > li > a:hover {
-  color: white;
+  color: rgb(30, 30, 30);
   background: inherit;
   border: 1px solid rgba(39, 174, 96, 1);
 }
@@ -106,7 +106,7 @@ footer a:hover {
   width: 100%;
   margin-top: 10px;
   margin-bottom: 10px;
-  background: rgba(236, 240, 241, 1);
+  background: rgba(235, 235, 235, 1);
 }
 
 .blog-post a {
