@@ -101,14 +101,26 @@ footer a:hover {
   padding: 10px;
 }
 
+.blog-posts > li:first-child {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.blog-posts > li:last-child {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
 .blog-post {
   width: 100%;
-  -moz-transition: all .2s;
   border: 1px solid transparent;
+  -webkit-transition: all .2s ease-in-out;
+     -moz-transition: all .2s ease-in-out;
+       -o-transition: all .2s ease-in-out;
 }
 
 .blog-post:hover {
-  box-shadow: 0px 0px 3px 0 rgba(30, 30, 30, 1);
+    border: 1px solid rgba(30, 30, 30, 0.2);
 }
 
 .blog-post a {
