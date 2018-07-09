@@ -27,7 +27,7 @@ what not. I tried to minimize a lot of those problems though.
 ## Actual Implementation
 
 An iterator encapsulates, in C++, a container. In the C implementation,
-however, encapsulates a struct of a traversable list, in this case, a [single
+however, it encapsulates a struct of a traversable list, in this case, a [single
 linked list](https://en.wikipedia.org/wiki/Linked_list).
 
 A single linked list is, simple put, a dynamically allocated list, which means
@@ -74,7 +74,20 @@ As it can be seen it is easy to iterate over a list without having to define
 code to traverse the list on the list implementation, and doing that is good
 because you separate responsability.
 
-Until next time.
+Those iterators could have more properties which help even more the act of
+writing good software as **size**, the first pointer denoted as **begin** and
+the last element denoted by a pointer with the name **end**. The final structure
+would look like:
+
+```
+struct iterator_s {
+    int value;
+    size_t size;
+    struct list_s *begin;
+    struct list_t *end;
+    struct list_t *list;
+}
+```
 
 ## References
 
