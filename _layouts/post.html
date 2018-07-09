@@ -38,11 +38,11 @@ layout: default
     var tt_button = document.getElementById('tt-share')
 
     fb_button.onclick = function() {
-      facebook_share('rafaelcn.github.io/{{page.url}}', '{{page.title}}', '{{page.snippet}}', '', '520', '350')
+      facebook_share('rafaelcn.github.io/{{page.url}}', '{{page.title}}', "{{page.snippet}}", '', '520', '350')
     }
 
     in_button.onclick = function() {
-      linkedin_share('rafaelcn.github.io/{{page.url}}', '{{page.title}}', '{{page.snippet}}')
+      linkedin_share('rafaelcn.github.io/{{page.url}}', '{{page.title}}', "{{page.snippet}}")
     }
 
     tt_button.onclick = function() {
