@@ -89,6 +89,17 @@ struct iterator_s {
 }
 ```
 
+## Edit on this post
+
+I had post the discussion about C iterators on single linked lists on linkedin
+to extend the discussion further. It had clarified the idea of using iterators
+for this purpose and showed me a lot of flaws on my current implementation.
+Nevertheless this project is interesting and teaches some encapsulation over
+this structure, which could be extended to other structures as well.
+
+The post on linkedin can be found [here](https://www.linkedin.com/groups/1627067/1627067-6421946707277283332).
+
+
 ## References
 
 1. [Single Linked List](https://en.wikipedia.org/wiki/Linked_list)
