@@ -313,6 +313,11 @@ footer a:hover {
   margin-top: 150px;
 }
 
+.is-active {
+    opacity: 1 !important;
+    font-weight: 400;
+}
+
 #content > ul {
   list-style: none;
   padding-bottom: 50px;

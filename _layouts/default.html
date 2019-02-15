@@ -10,8 +10,6 @@
       <!-- Mobile kind of support -->
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-
-
       <link rel="shortcut icon" href="https://rafaelcn.github.io/res/img/github_profile.png" type="image/x-icon">
 
       <!-- FontAwesome Icons -->
@@ -28,8 +26,15 @@
           <nav class="nav" style="margin-left:3%;">
             <ul class="list-unstyled list-inline">
               {% for link in site.navigation %}
+                {% assign current = nil %}
+                {% if link.url == page.url or page.layout == link.layout %}
+                    {% assign current = 'is-active' %}
+                {% endif %}
+                {% if page.layout == "post" and link.text == "blog" %}
+                    {% assign current = 'is-active' %}
+                {% endif %}
                 <li><a class="{{ current }}" href="{{ link.url }}">{{ link.text }}</a></li>
-              {% endfor %}
+                {% endfor %}
               <li style="float:right;margin-right:40px;"><noscript style="font-size:17px !important;" class="alert alert-warning">This website needs javascript to work properly.</noscript></li>
             </ul>
           </nav>
