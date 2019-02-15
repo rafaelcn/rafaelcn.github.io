@@ -1,6 +1,6 @@
 navigation:
 - text: blog
-  url: /index.html
+  url: /
 - text: about
   url: /about.html
 - text: presentations
@@ -10,5 +10,3 @@ navigation:
 defaults:
   - scope:
       path: "assets/slides/"
-    values:
-      is_slide: true
