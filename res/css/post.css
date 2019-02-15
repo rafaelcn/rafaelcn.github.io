@@ -1,11 +1,15 @@
 .nav > ul > li > a:hover {
-    background: inherit;
+  background: inherit;
 }
 
 .post-content {
-    padding: 1%;
-    background: white;
-    border-radius: 2px;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px 1px #ccc;
+  padding: 1%;
+  background: white;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px 1px #ccc;
+
+  -webkit-animation: fadein .425s;
+     -moz-animation: fadein .425s;
+       -o-animation: fadein .425s;
 }
