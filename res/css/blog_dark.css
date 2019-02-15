@@ -1,0 +1,35 @@
+.dark-mode,
+.dark-mode nav,
+.dark-mode nav > ul > li > a,
+.dark-mode nav > ul > li > a:hover,
+.dark-mode button,
+.dark-mode .fa {
+    color: white;
+    background: rgb(30, 30, 30);
+}
+
+.dark-mode > footer {
+    background: rgb(30, 30, 30);
+}
+
+.dark-mode .button-default:hover {
+    background: inherit;
+    border: 1px solid rgb(250, 250, 250);
+}
+
+.dark-mode .share:hover {
+    background: inherit;
+}
+
+.dark-mode .box,
+.dark-mode .post-text,
+.dark-mode .post-content {
+    border: none;
+    color: white;
+    box-shadow: none;
+    background: rgb(30, 30, 30) !important;
+}
+
+.dark-mode .separator {
+    background: linear-gradient(to right, rgb(30, 30, 30), rgb(39, 174, 96), rgb(30, 30, 30))
+}

@@ -18,12 +18,13 @@
       <link rel="stylesheet" type="text/css" href="/res/css/prism.css">
       <!--  Custom CSS -->
       <link rel="stylesheet" href="/res/css/blog.css">
+      <link rel="stylesheet" href="/res/css/blog_dark.css">
     </head>
 
-    <body>
-      <div class="wrapper">
+    <body class="dark-moe">
+      <div class="wrapper" style="margin-left: 3%; margin-right: 3%;">
         <div class="row">
-          <nav class="nav" style="margin-left:3%;">
+          <nav class="nav">
             <ul class="list-unstyled list-inline">
               {% for link in site.navigation %}
                 {% assign current = nil %}
@@ -35,7 +36,8 @@
                 {% endif %}
                 <li><a class="{{ current }}" href="{{ link.url }}">{{ link.text }}</a></li>
                 {% endfor %}
-              <li style="float:right;margin-right:40px;"><noscript style="font-size:17px !important;" class="alert alert-warning">This website needs javascript to work properly.</noscript></li>
+              <li class="pull-right" id="theme-toggle"></li>
+              <li class="pull-right"><noscript style="font-size:17px !important;" class="alert alert-warning">This website needs javascript to work properly.</noscript></li>
             </ul>
           </nav>
         </div>
@@ -52,7 +54,6 @@
           <li><a href="mailto:rafaelnunes@engineer.com" title="Contact me."><i class="fa fa-envelope"></i></a></li>
           <li><a href="https://github.com/rafaelcn" title="rafaelcn @ Github."><i class="fa fa-github-alt"></i></a></li>
           <li><a href="http://stackoverflow.com/users/2763060/rafael-nunes" title="rafaelcn @ StackOverflow."><i class="fa fa-stack-overflow"></i></a></li>
-          <li><a><i class=""></i></a></li>
         </ul>
 
         <p class="text-center">
@@ -74,5 +75,6 @@
         ga('send', 'pageview');
       </script>
       <script type="text/javascript" src="/res/js/prism.js"></script>
+            <script type="text/javascript" src="/res/js/theme_toggle.js"></script>
     </body>
 </html>

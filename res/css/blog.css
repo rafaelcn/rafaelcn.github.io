@@ -305,6 +305,19 @@ footer a:hover {
     background: linear-gradient(180deg, rgb(250, 250, 250), rgb(245, 245, 245));
 }
 
+.box {
+    background: white;
+    padding: 1%;
+    border-radius:2px;
+}
+
+.separator {
+    height: 5px;
+    width: 80%;
+    border: none;
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(39, 174, 96), rgb(255, 255, 255))
+}
+
 .wrapper {
   min-height: calc(100vh - 26vh);
 }
@@ -321,6 +334,12 @@ footer a:hover {
 #content > ul {
   list-style: none;
   padding-bottom: 50px;
+}
+
+#theme-toggle {
+    -webkit-animation: fadein .7s;
+    -moz-animation: fadein .7s;
+    -o-animation: fadein .7s;
 }
 
 @keyframes fadein {

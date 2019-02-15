@@ -10,11 +10,8 @@ title: Presentations
     Here you can find a list of slides of my previous presentations in events.
     Yes I work with .pptx files by using WPS office. If I export the old .pptx
     version of the presentation to .pdf some slides might be scrambled due to
-    the use of some animations.
-  </p>
-
-  <p>
-    For now I will let it be, and use <i>beamer</i> to create my presentations.
+    the use of some animations. For now I will let it be, and use <i>beamer</i>
+    to create my presentations.
   </p>
 </div>
 
@@ -22,11 +19,10 @@ title: Presentations
 
 {% for slide in slides %}
 {% if slide.extname == ".pptx" %}
-<div class="blog-post">
+<div class="presentation-wrapper">
   <li class="presentation-post">
     {% assign basename = slide.path | split: "/"%}
-    <b>{{ basename.last | split: "." | first }}</b>.
-    <i>Last modified on: {{ slide.modified_time | date: "%d of %b, %y." }}</i>
+    {{ basename.last | split: "." | first }}
 
     <a href="{{ slide.path }}" class="pull-right" title="Download this presentation">
       <i class="fa fa-2x fa-download"></i>
