@@ -45,7 +45,8 @@ that it grows its size dynamically to allocate more elements. The iterator
 encapsulates this structure which is, most of the time and for the sake of
 simplicity composed by two fields that are shown bellow.
 
-```
+
+``` c
 struct list_s {
     int value;
     struct list_s *next;
@@ -56,7 +57,7 @@ The value field is the field which actually holds the element and the next
 pointer, well, it points to the next element on the list. Knowing the structure
 of the `list_t` we can implement an iterator like that:
 
-```
+``` c
 struct iterator_s {
     struct list_s *list;
 }
@@ -68,7 +69,7 @@ it. Implementations of this methods can be found on the repository
 are safe to call and lead to writing software more legible as shown on the next
 excerpt of code.
 
-```
+``` c
 list_t *list = ...;
 
 iterator_t *it = ...;
@@ -89,7 +90,7 @@ writing good software as **size**, the first pointer denoted as **begin** and
 the last element denoted by a pointer with the name **end**. The final structure
 would look like:
 
-```
+``` c
 struct iterator_s {
     int value;
     size_t size;
