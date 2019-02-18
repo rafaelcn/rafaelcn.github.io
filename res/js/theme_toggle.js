@@ -60,7 +60,7 @@ function read() {
     let result = ""
 
     for (var i = 0; i < cookie.length; i++) {
-        var c = cookie[i];
+        var c = cookie[i].trim();
         // Is the value read to be read?
         var readIt = false
         // The key that will be formed as it reads the cookie
