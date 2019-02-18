@@ -19,6 +19,11 @@
       <!--  Custom CSS -->
       <link rel="stylesheet" href="/res/css/blog.css">
       <link rel="stylesheet" href="/res/css/blog_dark.css">
+
+
+      {% if page.layout == "post" or page.url == "/404" %}
+          {% include mathjax.html %}
+      {% endif %}
     </head>
 
     <body class="">

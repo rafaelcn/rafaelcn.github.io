@@ -70,32 +70,31 @@ layout: default
       window.open('https://www.linkedin.com/shareArticle?mini=true&url='+ url +'&title='+ title + '&summary='+ desc +'&source=');
     }
   </script>
-  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   <script>
-	  var disqus_config = function () {
-		  this.page.title = '{{ page.title }}'
-		  this.page.url = 'http://rafaelcn.github.io{{ page.url }}';
-		  this.page.identifier = '{{ page.title }}'
-	  };
+    var disqus_config = function () {
+        this.page.title = '{{ page.title }}'
+        this.page.url = 'http://rafaelcn.github.io{{ page.url }}';
+        this.page.identifier = '{{ page.title }}'
+    };
 
-      let activation = function() {
-          var d = document, s = d.createElement('script');
+    let activation = function() {
+        var d = document, s = d.createElement('script');
 
-          s.src = '//rafaelcngithubio.disqus.com/embed.js';
+        s.src = '//rafaelcngithubio.disqus.com/embed.js';
 
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-      };
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    };
 
-      // on click load diqus
-      let disqus_button = document.getElementById('disqus-activation')
+    // on click load diqus
+    let disqus_button = document.getElementById('disqus-activation')
 
-      disqus_button.onclick = function() {
-          disqus_button.style.display = "none"
-          //document.getElementById('disqus-activation-area').style.display = "none"
+    disqus_button.onclick = function() {
+        disqus_button.style.display = "none"
+        //document.getElementById('disqus-activation-area').style.display = "none"
 
-          activation()
-      }
+        activation()
+    }
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
