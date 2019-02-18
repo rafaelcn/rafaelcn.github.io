@@ -30,6 +30,22 @@
     background: rgb(30, 30, 30) !important;
 }
 
+.dark-mode .alert-info {
+    background: rgba(52, 152, 219, .2);
+}
+
+.dark-mode .alert-success {
+    background: rgba(46, 204, 113, .2);
+}
+
+.dark-mode .alert-danger {
+    background:  rgba(231, 76, 60, .2);
+}
+
+.dark-mode .alert-warning {
+    background: rgba(251, 246, 15, .2);
+}
+
 .dark-mode .separator {
     background: linear-gradient(to right, rgb(30, 30, 30), rgb(39, 174, 96), rgb(30, 30, 30))
 }
