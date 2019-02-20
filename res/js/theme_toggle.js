@@ -1,7 +1,6 @@
 'use strict'
 
 let toggle = document.getElementById("theme-toggle")
-
 let body = document.body;
 
 (function () {
@@ -10,87 +9,49 @@ let body = document.body;
     toggle.firstElementChild.setAttribute('title', 'Theme change!')
 })()
 
+let el = toggle.firstElementChild
 
 function init() {
-    let theme = read()
-    var el = toggle.firstElementChild
-
-    if (theme == "") {
+    if (read() == "" || read() === undefined) {
         // cookie doesn't exist, set the light theme
+        set("light")
         el.setAttribute('class', 'fa fa-moon-o')
         body.setAttribute('class', '')
-    } else if (theme == "light") {
+    } else if (read() == "light") {
         el.setAttribute('class', 'fa fa-moon-o')
         body.setAttribute('class', '')
-    } else if (theme == "dark") {
+    } else if (read() == "dark") {
         el.setAttribute('class', 'fa fa-sun-o')
         body.setAttribute('class', 'dark-mode')
     }
 }
 
 function toggleTheme() {
-    let theme = read()
-    var el = toggle.firstElementChild
-
     clear(el)
 
-    if (theme == "") {
+    if (read() == "") {
         // cookie doesn't exist, set the light theme
         set("light")
         el.setAttribute('class', 'fa fa-sun-o')
         body.setAttribute('class', '')
         return
-    } else if (theme == "light") {
+    } else if (read() == "light") {
         set("dark")
         el.setAttribute('class', 'fa fa-sun-o')
         body.setAttribute('class', 'dark-mode')
-    } else if (theme == "dark") {
+    } else if (read() == "dark") {
         set("light")
         el.setAttribute('class', 'fa fa-moon-o')
         body.setAttribute('class', '')
     }
 }
 
-/**
- * Reads the cookie value of the theme key.
- */
 function read() {
-    let cookie = document.cookie.split(';')
-
-    let result = ""
-
-    for (var i = 0; i < cookie.length; i++) {
-        var c = cookie[i].trim();
-        // Is the value read to be read?
-        var readIt = false
-        // The key that will be formed as it reads the cookie
-        var key = ''
-
-        for (var j = 0; j < c.length; j++) {
-            if (readIt == false) {
-                key += c[j]
-            } else {
-                result += c[j]
-            }
-
-            if (key == 'theme' && !readIt) {
-                readIt = true
-                j++
-            }
-        }
-    }
-
-    return result;
+    return Cookies.get('theme')
 }
 
-/**
- * Sets the cookie value of the theme key.
- */
 function set(value) {
-    var date = new Date()
-    date.setTime(date.getTime() + (30 * 60 * 60 * 24 * 1000))
-
-    document.cookie = "theme=" + value + ";expires=" + date.toUTCString() + ";path=/"
+    Cookies.set('theme', value)
 }
 
 function clear(element) {
