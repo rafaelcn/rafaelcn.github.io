@@ -25,6 +25,10 @@
     background: rgb(50, 50, 50);
 }
 
+.dark-mode #license:hover {
+    color: rgb(255, 255, 255) !important;
+}
+
 .dark-mode .box,
 .dark-mode .post-text,
 .dark-mode .post-content {
