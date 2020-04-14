@@ -18,6 +18,7 @@ html, body {
 }
 
 a {
+  cursor: pointer;
   color: rgba(73, 141, 91, 1);
   text-decoration: none !important;
   -webkit-transition: all .1s ease-in;
