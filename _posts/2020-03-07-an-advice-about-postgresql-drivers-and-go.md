@@ -155,4 +155,5 @@ All in all the usage of pgx was quite clear to me, contrary to the usage of
 pgbouncer and <insert any other pgsql driver here>. I could just use it without
 having to worry about two different, or possible more, cogs working together.
 
-So in the end I vote for *pgx*, for its clear and documented API.
+So in the end I vote for *pgx*, for its clear and documented API, has nice
+features such as database types and connection pool, amongst others.
