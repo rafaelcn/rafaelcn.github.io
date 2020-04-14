@@ -7,7 +7,7 @@ snippet: Connection pools implementations on Go PostgreSQL drivers are scarse, i
 
 # Introduction
 
-A few weeks ago I was trying to implement  a service that I had on Heroku use
+A few weeks ago I was trying to implement a service that I had on Heroku to use
 as few connections as possible to the database as they limit the number of
 connections to 20 on a free dynamo.
 
