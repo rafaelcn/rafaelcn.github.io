@@ -17,8 +17,12 @@
     border: 1px solid rgb(250, 250, 250);
 }
 
-.dark-mode .share:hover {
+.dark-mode .share > * {
     background: inherit;
+}
+
+.dark-mode .share:hover {
+    background: rgb(50, 50, 50);
 }
 
 .dark-mode .box,
