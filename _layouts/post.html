@@ -7,11 +7,11 @@ layout: default
   <header class="post-header">
 
     <div class="row">
-      <h1 class="post-title col-md-7">
+      <h1 class="post-title col-md-10">
         {{ page.title }}
       </h1>
 
-      <div class="col-md-5">
+      <div class="col-md-2">
       <ul class="list-unstyled list-inline pull-right">
         <li><button id="fb-share" class="share"><i class="fa fa-facebook-official"></i></button></li>
         <li><button id="tt-share" class="share"><i class="fa fa-twitter"></i></button></li>
@@ -68,6 +68,15 @@ layout: default
 
     function linkedin_share(url, title, desc) {
       window.open('https://www.linkedin.com/shareArticle?mini=true&url='+ url +'&title='+ title + '&summary='+ desc +'&source=');
+    }
+
+    // post-title auto size if too big
+    let t = document.getElementsByClassName('post-title')[0]
+    let s = t.innerHTML.trim().split(' ').join('').length
+    let w = t.innerHTML.trim().split(' ').length
+
+    if (s >= 23) {  
+      t.style.fontSize = w * 17 + 'px'
     }
   </script>
   <script>
