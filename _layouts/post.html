@@ -12,11 +12,11 @@ layout: default
       </h1>
 
       <div class="col-md-2">
-      <ul class="list-unstyled list-inline pull-right">
-        <li><button id="fb-share" class="share"><i class="fa fa-facebook-official"></i></button></li>
-        <li><button id="tt-share" class="share"><i class="fa fa-twitter"></i></button></li>
-        <li><button id="in-share" class="share"><i class="fa fa-linkedin"></i></button></li>
-      </ul>
+        <ul class="list-unstyled list-inline pull-right">
+            <li><button id="fb-share" class="share"><i class="fab fa-facebook-square"></i></button></li>
+            <li><button id="tt-share" class="share"><i class="fab fa-twitter"></i></button></li>
+            <li><button id="in-share" class="share"><i class="fab fa-linkedin"></i></button></li>
+        </ul>
       </div>
     </div>
 
@@ -70,12 +70,12 @@ layout: default
       window.open('https://www.linkedin.com/shareArticle?mini=true&url='+ url +'&title='+ title + '&summary='+ desc +'&source=');
     }
 
-    // post-title auto size if too big
+    // post-title auto size if too big (not quite right yet)
     let t = document.getElementsByClassName('post-title')[0]
     let s = t.innerHTML.trim().split(' ').join('').length
     let w = t.innerHTML.trim().split(' ').length
 
-    if (s >= 23) {  
+    if (s >= 23) {
       t.style.fontSize = w * 17 + 'px'
     }
   </script>

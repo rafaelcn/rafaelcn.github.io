@@ -38,6 +38,14 @@
     background: rgb(30, 30, 30) !important;
 }
 
+.dark-mode .list-social > li > a {
+    color: rgb(135, 135, 135) !important;
+}
+
+.dark-mode .list-social > li > a:hover {
+    color: rgb(255, 255, 255) !important;
+}
+
 .dark-mode .alert-info {
     background: rgba(52, 152, 219, .2);
 }
