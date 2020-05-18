@@ -8,8 +8,10 @@ title: Blog
   {% for post in site.posts %}
     <li class="blog-post">
       <h5 class="blog-info">
-        {{ post.date | date_to_long_string }}
-        <span class="post-language" >
+        <span class="post-date">
+          {{ post.date | date_to_long_string }}
+        </span>
+        <span class="post-language">
           {% assign Language = 'nil' %}
           {% assign Title = 'nil' %}
           {% if post.language == 'portuguese' %}
@@ -19,7 +21,8 @@ title: Blog
             {% assign Title='This article is written in English' %}
             {% assign Language = ' English' %}
           {% endif %}
-          <i class="fa fa-language" title="{{ Title }}">{{ Language }}</i>
+          <i class="fa fa-language" title="{{ Title }}" style="font-size: 2.1rem;margin-right: 3px;"></i>
+          {{ Language }}
         </span>
       </h5>
       <h2>
