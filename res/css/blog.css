@@ -10,7 +10,7 @@ body {
   background-size: cover;
   background: rgb(255, 255, 255);
 
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', Garamond, sans-serif;
 
   display: flex;
   min-height: 100vh;
