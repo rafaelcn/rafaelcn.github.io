@@ -12,6 +12,16 @@
 
       <!-- SEO -->
       <meta name="description" content="Rafael's blog on computers and other stuff">
+      
+      {% if page.layout == "post" %}
+        <meta property="og:title" content="Rafael's blog - {{ page.title }}">
+      {% else %}
+        <meta property="og:title" content="Rafael's blog">
+      {% endif %}
+      <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+      <meta property="og:image" content="{{ site.url }}/res/img/github_profile.png">
+      <meta property="og:image:type" content="image/png">
+      <meta property="og:description" content="Rafael's blog on computers and other stuff">
 
       <link rel="shortcut icon" href="https://rafaelcn.github.io/res/img/github_profile.png" type="image/x-icon">
 
@@ -20,6 +30,7 @@
       <!-- Prism CSS -->
       <link rel="stylesheet" href="/res/css/prism.css">
       <!--  Custom CSS -->
+      <link rel="stylesheet" href="/res/css/font.css">
       <link rel="stylesheet" href="/res/css/media.css">
       <link rel="stylesheet" href="/res/css/blog.css">
       <link rel="stylesheet" href="/res/css/blog_dark.css">
