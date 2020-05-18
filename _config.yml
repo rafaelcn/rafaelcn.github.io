@@ -10,3 +10,5 @@ navigation:
 defaults:
   - scope:
       path: "assets/slides/"
+    values:
+      layout: "default"
