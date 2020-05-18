@@ -10,7 +10,7 @@ body {
   background-size: cover;
   background: rgb(255, 255, 255);
 
-  font-family: 'Raleway', Roboto, sans-serif;
+  font-family: 'Raleway', Roboto, Courier, sans-serif;
 
   display: flex;
   min-height: 100vh;
