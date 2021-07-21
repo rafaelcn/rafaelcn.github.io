@@ -3,6 +3,10 @@
 let toggle = document.getElementById("theme-toggle")
 let body = document.body;
 
+let image = document.getElementById('logo');
+let image_dark = '/res/img/lambda_white.svg';
+let image_light = '/res/img/lambda.svg';
+
 (function () {
     toggle.append(document.createElement('i'))
     toggle.firstElementChild.setAttribute('id', 'toggle-button')
@@ -20,12 +24,15 @@ function init() {
         set("light")
         el.setAttribute('class', icon_theme_dark)
         body.setAttribute('class', '')
+        image.setAttribute('src', image_light)
     } else if (read() == "light") {
         el.setAttribute('class', icon_theme_dark)
         body.setAttribute('class', '')
+        image.setAttribute('src', image_light)
     } else if (read() == "dark") {
         el.setAttribute('class', icon_theme_light)
         body.setAttribute('class', 'dark-mode')
+        image.setAttribute('src', image_dark)
     }
 }
 
@@ -42,10 +49,12 @@ function toggleTheme() {
         set("dark")
         el.setAttribute('class', icon_theme_light)
         body.setAttribute('class', 'dark-mode')
+        image.setAttribute('src', image_dark)
     } else if (read() == "dark") {
         set("light")
         el.setAttribute('class', icon_theme_dark)
         body.setAttribute('class', '')
+        image.setAttribute('src', image_light)
     }
 }
 

@@ -10,38 +10,54 @@
 .dark-mode nav a,
 .dark-mode nav a:hover,
 .dark-mode button,
-.dark-mode .fa {
-    color: white !important;
+.dark-mode main,
+.dark-mode .navbar-menu {
+    color: whitesmoke !important;
     background: rgb(30, 30, 30) !important;
+}
+
+.dark-mode .fa,
+.dark-mode .far,
+.dark-mode .fab,
+.dark-mode .fas {
+    color: whitesmoke !important;
 }
 
 .dark-mode footer {
     background: rgb(30, 30, 30) !important;
 }
 
-.dark-mode .button-default:hover {
-    background: inherit;
-    border: 1px solid rgb(250, 250, 250);
-}
-
-.dark-mode .share > * {
-    background: inherit;
-}
-
-.dark-mode .share:hover {
-    background: rgb(50, 50, 50);
+.dark-mode a:hover {
+    color: rgb(66, 202, 123) !important;
 }
 
 .dark-mode #license:hover {
     color: rgb(255, 255, 255) !important;
 }
 
+.dark-mode .box {
+    background: rgb(30, 30, 30) !important;
+    box-shadow: 0 0 !important;
+}
+
+.dark-mode .box p {
+    color: whitesmoke !important;
+}
+
 .dark-mode .post-text,
 .dark-mode .post-content {
     border: none;
-    color: white;
+    color: whitesmoke;
     box-shadow: none;
     background: rgb(30, 30, 30) !important;
+}
+
+.dark-mode .post-date {
+    color: whitesmoke !important;
+}
+
+.dark-mode .presentation-post {
+    color: whitesmoke !important;
 }
 
 .dark-mode .list-social > li > a {
@@ -52,22 +68,24 @@
     color: rgb(255, 255, 255) !important;
 }
 
-.dark-mode .alert-info {
-    background: rgba(52, 152, 219, .2);
+.dark-mode .button.is-default.is-light {
+    background: rgb(60, 60, 60) !important;
 }
 
-.dark-mode .alert-success {
-    background: rgba(46, 204, 113, .2);
+.dark-mode .button.is-default.is-light:hover {
+    background: rgb(70, 70, 70) !important;
 }
 
-.dark-mode .alert-danger {
-    background:  rgba(231, 76, 60, .2);
+.dark-mode .button.is-success.is-light {
+    background: rgba(53, 126, 77, 0.2) !important;
+    color: rgb(171, 240, 171)!important;
 }
 
-.dark-mode .alert-warning {
-    background: rgba(251, 246, 15, .2);
+.dark-mode .button.is-success.is-light:hover {
+    background: rgba(53, 126, 77, 0.4) !important;
+    color: rgb(171, 240, 171) !important;
 }
 
-.dark-mode .separator {
-    background: linear-gradient(to right, rgb(30, 30, 30), rgb(39, 174, 96), rgb(30, 30, 30))
+.dark-mode .notification.is-info {
+    color: rgba(25, 25, 201, 0.7) !important;
 }
