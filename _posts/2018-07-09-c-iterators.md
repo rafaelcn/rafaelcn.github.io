@@ -1,7 +1,7 @@
 ---
 layout: post
 title: C Iterators
-snippet: A little feature I've been experimenting with
+snippet: A little feature I've been experimenting with. It turns out it isn't that good.
 language: english
 published: true
 ---
@@ -13,16 +13,9 @@ Nevertheless this project is interesting and teaches some encapsulation over
 this structure, which could be extended to other structures as well.
 The post on linkedin can be found
 [here](https://www.linkedin.com/groups/1627067/1627067-6421946707277283332).
-{: .alert .alert-danger}
+{: .notification .is-info .is-light}
 
-<h2>Table of contents</h2>
-
-* TOC
-{: toc}
-
-{: .gap}
-
-## WTF are you implementing iterators in C? Is that even possible?
+# WTF are you implementing iterators in C? Is that even possible?
 
 Calm down, everything is possible in C, just like shooting your foot using it.
 But I'm here to report a little experiment I've been doing trying to minimize
@@ -33,7 +26,7 @@ Iterators in C are quite easy to use and using it you feel aproximatelly the
 same way if you were using Java or C++, just less safe, more error prone and
 what not. I tried to minimize a lot of those problems though.
 
-## Actual Implementation
+# Actual Implementation
 
 An iterator encapsulates, in C++, a container. In the C implementation,
 however, it encapsulates a struct of a traversable list, in this case, a [single
@@ -99,7 +92,7 @@ struct iterator_s {
 }
 ```
 
-## References
+# References
 
 1. [Single Linked List](https://en.wikipedia.org/wiki/Linked_list)
 2. [C Iterators](https://github.com/rafaelcn/c-iterators)

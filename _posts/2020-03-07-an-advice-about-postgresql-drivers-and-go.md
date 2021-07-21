@@ -5,13 +5,6 @@ language: english
 snippet: Connection pools implementations on Go PostgreSQL drivers are scarse, in this post I will talk about lib/pg, pgbouncer and pgx
 ---
 
-<h2>Table of contents</h2>
-
-* TOC
-{: toc}
-
-{: .gap}
-
 # Introduction
 
 A few weeks ago I was trying to implement a service that I had on Heroku to use
