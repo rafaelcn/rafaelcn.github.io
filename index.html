@@ -16,17 +16,17 @@ title: Blog
           {% assign Title = 'nil' %}
           {% if post.language == 'portuguese' %}
               {% assign Title = 'Este artigo está escrito em Português' %}
-              {% assign Language = ' Portuguese' %}
+              {% assign Language = 'PT' %}
           {% else %}
             {% assign Title='This article is written in English' %}
-            {% assign Language = ' English' %}
+            {% assign Language = 'EN' %}
           {% endif %}
-          <i class="fa fa-language" title="{{ Title }}" style="font-size: 2.1rem;margin-right: 3px;"></i>
+          <i class="fa fa-language" title="{{ Title }}" style="font-size: 1.0rem;margin-right: 3px;"></i>
           {{ Language }}
         </span>
       </h5>
       <h2>
-        <a href="{{ post.url }}">{{ post.title }}</a>
+        <a class="post-title is-size-3" href="{{ post.url }}">{{ post.title }}</a>
       </h2>
       <h4 class="post-snippet">
         {{ post.snippet }}

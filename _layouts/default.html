@@ -4,15 +4,12 @@
       <meta charset="utf-8">
       <title>{{ page.title }}</title>
 
-      <link rel="stylesheet" href="/res/css/bootstrap.min.css">
-      <link rel="stylesheet" href="/res/css/bootstrap-theme.min.css">
-
       <!-- Mobile kind of support -->
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
       <!-- SEO -->
       <meta name="description" content="Rafael's blog on computers and other stuff">
-      
+
       {% if page.layout == "post" %}
         <meta property="og:title" content="Rafael's blog - {{ page.title }}">
       {% else %}
@@ -25,19 +22,18 @@
 
       <link rel="shortcut icon" href="https://rafaelcn.github.io/res/img/github_profile.png" type="image/x-icon">
 
-      <!--  Custom CSS -->
-      <link rel="stylesheet" href="/res/css/font.min.css">
+      <link rel="stylesheet" href="/res/css/bulma.min.css">
 
+      <!--  Custom CSS -->
       <link rel="stylesheet" href="/res/css/blog.min.css">
-      <link rel="stylesheet" href="/res/css/blog_dark.min.css">
-      <link rel="stylesheet" href="/res/css/media.min.css">
+      <link rel="stylesheet" href="/res/css/font.min.css">
 
       <!-- FontAwesome Icons -->
       <link rel="stylesheet" href="/res/css/all.min.css">
       <!-- Prism CSS -->
       <link rel="stylesheet" href="/res/css/prism.min.css">
       <link rel="stylesheet" href="/res/css/prism_dark.min.css">
-      
+
 
       {% if page.layout == "post" or page.url == "/404" %}
           {% include mathjax.html %}
@@ -45,10 +41,21 @@
     </head>
 
     <body class="">
-      <div class="wrapper" style="margin-left: 3%; margin-right: 3%;">
-        <div class="row">
-          <nav class="nav">
-            <ul class="list-unstyled list-inline">
+      <main>
+        <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">
+            <a class="navbar-item" style="cursor:default" href="#">
+              <img src="/res/img/lambda.svg" width="32px" height="32px" alt="blog logo (lambda)">
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+          <div class="navbar-menu" id="navbar">
+            <div class="navbar-start">
               {% for link in site.navigation %}
                 {% assign current = nil %}
                 {% if link.url == page.url or page.layout == link.layout %}
@@ -57,33 +64,34 @@
                 {% if page.layout == "post" and link.text == "blog" %}
                     {% assign current = 'is-active' %}
                 {% endif %}
-                <li><a class="{{ current }}" href="{{ link.url }}">{{ link.text }}</a></li>
-                {% endfor %}
-              <li class="pull-right" id="theme-toggle"></li>
-              <li class="pull-right"><noscript style="font-size:17px !important;" class="alert alert-warning">This website needs javascript to work properly.</noscript></li>
-            </ul>
-          </nav>
-        </div>
-
-        <div class="row content">
-          <div class="container-fluid" id="content">
-              {{ content }}
+                <a class="navbar-item {{ current }}" href="{{ link.url }}">{{ link.text }}</a>
+              {% endfor %}
+            </div>
+            <div class="navbar-end">
+              <span class="navbar-item" id="theme-toggle"></span>
+            </div>
           </div>
+        </nav>
+
+        <div class="container mt-6 mb-6" id="content">
+            {{ content }}
         </div>
-      </div>
 
+      </main>
       <footer class="footer">
-        <ul class="text-center list-social list-unstyled list-inline">
-          <li><a href="mailto:rafaelnunes@engineer.com" title="Contact me."><i class="fas fa-envelope"></i></a></li>
-          <li><a href="https://github.com/rafaelcn" title="rafaelcn @ Github."><i class="fab fa-github-alt"></i></a></li>
-          <li><a href="https://gitlab.com/rafaelcn" title="rafaelcn @ Gitlab."><i class="fab fa-gitlab"></i></a></li>
-          <li><a href="http://stackoverflow.com/users/2763060/rafael-nunes" title="rafaelcn @ StackOverflow."><i class="fab fa-stack-overflow"></i></a></li>
-        </ul>
+        <div class="has-text-centered">
+          <ul>
+            <li><a href="mailto:rafaelnunes@engineer.com" title="Contact me."><i class="fas fa-envelope"></i></a></li>
+            <li><a href="https://github.com/rafaelcn" title="rafaelcn @ Github."><i class="fab fa-github-alt"></i></a></li>
+            <li><a href="https://gitlab.com/rafaelcn" title="rafaelcn @ Gitlab."><i class="fab fa-gitlab"></i></a></li>
+            <li><a href="http://stackoverflow.com/users/2763060/rafael-nunes" title="rafaelcn @ StackOverflow."><i class="fab fa-stack-overflow"></i></a></li>
+          </ul>
+        </div>
 
-        <p class="text-center">
-          <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+        <p class="has-text-centered mt-5">
+          <a class="" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
             <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
-          </a><br><br>
+          </a><br>
           This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" id="license">Creative
           Commons Attribution Non Commercial 4.0 International License</a>.
         </p>
@@ -97,6 +105,24 @@
 
         ga('create', 'UA-68972864-1', 'auto');
         ga('send', 'pageview');
+
+        document.addEventListener('DOMContentLoaded', () => {
+          // Get all "navbar-burger" elements
+          let burguer = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+          if (burguer.length > 0) {
+            burguer.forEach( el => {
+              el.addEventListener('click', () => {
+                const target = el.dataset.target;
+                const $target = document.getElementById(target);
+
+                el.classList.toggle('is-active');
+                $target.classList.toggle('is-active');
+
+              });
+            });
+          }
+        });
       </script>
       <script type="text/javascript" src="/res/js/prism.js"></script>
       <script type="text/javascript" src="/res/js/cookie.min.js"></script>

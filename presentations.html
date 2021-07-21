@@ -3,9 +3,9 @@ layout: default
 title: Presentations
 ---
 
-<link rel="stylesheet" href="/res/css/presentations.css">
+<link rel="stylesheet" href="/res/css/presentations.min.css">
 
-<div class="post-text">
+<div class="presentation-content">
   <p>
     Here you can find a list of slides of my previous presentations in events.
     Yes I work with .pptx files by using WPS office. If I export the old .pptx
@@ -19,15 +19,18 @@ title: Presentations
 
 {% for slide in slides %}
 {% if slide.extname == ".pptx" %}
-<div class="presentation-wrapper">
-  <li class="presentation-post">
-    {% assign basename = slide.path | split: "/"%}
-    {{ basename.last | split: "." | first }}
-
-    <a href="{{ slide.path }}" class="pull-right" title="Download this presentation">
-      <i class="fa fa-2x fa-download"></i>
-    </a>
+<ul class="box mt-6">
+  <li class="presentation-post is-flex is-flex-direction-row">
+    <span class="is-flex-grow-1 is-align-self-center">
+      {% assign basename = slide.path | split: "/"%}
+      {{ basename.last | split: "." | first }}
+    </span>
+    <span>
+      <a class="button is-success is-light" href="{{ slide.path }}" title="Download this presentation">
+        Download
+      </a>
+    </span>
   </li>
-</div>
+</ul>
 {% endif %}
 {% endfor %}

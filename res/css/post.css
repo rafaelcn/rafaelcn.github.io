@@ -1,15 +1,41 @@
-.nav > ul > li > a:hover {
-  background: inherit;
+.post-content {
+  animation: fadein .725s;
+  -webkit-animation: fadein .725s;
+     -moz-animation: fadein .725s;
+       -o-animation: fadein .725s;
 }
 
-.post-content {
-  padding: 1%;
-  background: white;
-  border-radius: 2px;
-  border: 1px solid #ccc;
-  box-shadow: 0 0 10px 1px #ccc;
+.post-header > ul > li {
+    display: inline-block;
+    margin-left: 3px;
+    margin-right: 3px;
+}
 
-  -webkit-animation: fadein .425s;
-     -moz-animation: fadein .425s;
-       -o-animation: fadein .425s;
+.post-title {
+    font-size: 5rem;
+}
+
+.post-text ol,
+.post-text ul {
+    /* Bulma removes this setting */
+    margin-left: 2rem;
+}
+
+.post-text > h1 {
+    /* Bulma removes this setting */
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.post-text p {
+    font-size: 1.25rem;
+    text-indent: 2rem;
+    text-align: justify;
+}
+
+/* Bulma/Prism overrides for code */
+
+.token.operator {
+    background: none !important;
 }

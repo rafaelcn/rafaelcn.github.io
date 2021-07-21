@@ -1,22 +1,22 @@
 /**
  * The website's dark core CSS.
  *
- * Author: Rafael Campos Nunes <rafaelnunes@engineer.com>
+ * @author: Rafael Campos Nunes <rafaelnunes@engineer.com>
  *
  */
 
 .dark-mode,
 .dark-mode nav,
-.dark-mode nav > ul > li > a,
-.dark-mode nav > ul > li > a:hover,
+.dark-mode nav a,
+.dark-mode nav a:hover,
 .dark-mode button,
 .dark-mode .fa {
-    color: white;
-    background: rgb(30, 30, 30);
+    color: white !important;
+    background: rgb(30, 30, 30) !important;
 }
 
-.dark-mode > footer {
-    background: rgb(30, 30, 30);
+.dark-mode footer {
+    background: rgb(30, 30, 30) !important;
 }
 
 .dark-mode .button-default:hover {
@@ -36,7 +36,6 @@
     color: rgb(255, 255, 255) !important;
 }
 
-.dark-mode .box,
 .dark-mode .post-text,
 .dark-mode .post-content {
     border: none;

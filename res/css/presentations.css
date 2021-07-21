@@ -1,15 +1,8 @@
+.presentation-content {
+    padding: 1.25rem;
+}
+
 .presentation-post {
-    padding: 2%;
-    font-size: 18px;
+    font-size: 1.2rem;
     cursor: default;
-    list-style: none;
-    border: 1px solid transparent;
-}
-
-.presentation-post:hover {
-    border: 1px solid #ccc;
-}
-
-.presentation-wrapper {
-
 }
