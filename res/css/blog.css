@@ -42,6 +42,10 @@ footer ul > li {
     margin-right: 12px;
 }
 
+footer > * {
+    background: rgba(39, 174, 96, 1) !important;
+}
+
 a {
     color: rgba(39,174,96,1);
 
