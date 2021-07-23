@@ -23,9 +23,12 @@
     color: whitesmoke !important;
 }
 
-.dark-mode footer {
+.dark-mode footer,
+.dark-mode footer > * {
     background: rgb(30, 30, 30) !important;
 }
+
+
 
 .dark-mode a:hover {
     color: rgb(66, 202, 123) !important;
