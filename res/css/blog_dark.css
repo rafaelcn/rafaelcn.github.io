@@ -101,7 +101,7 @@
 
 .dark-mode p > code,
 .dark-mode li > code {
-    background: rgba(90, 90, 90, .5);
+    background: rgba(90, 90, 90, .5) !important;
     color: rgba(47, 239, 135, 1);
 }
 
