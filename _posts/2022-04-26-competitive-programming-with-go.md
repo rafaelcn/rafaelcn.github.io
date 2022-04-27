@@ -110,4 +110,9 @@ func main() {
 
 At the end of the day you gonna get our input read correctly and whenever you
 want to write something the output it will be flushed before the end of the
-program. On a future post I'll show some use cases of this template.
+program.
+
+Be careful with one thing though, don't over use debug statements. It might have
+some impact on the jury's performance when evaluating your solution. I didn't
+make a bench test to assess that but I plan to do it on the future post, along
+with some solutions using the template.
