@@ -61,10 +61,13 @@ func O(format string, a ...interface{}) {
 }
 
 // for debug purposes
-const hostname = "<your computer hostname>"
+var (
+	localHostname = "<your computer hostname>"
+	juryHostname, _ = os.Hostname()
+)
 
 func D(args ...interface{}) {
-	if h, err := os.Hostname(); h == hostname && err == nil {
+	if localHostname == juryHostname {
 		fmt.Fprintln(os.Stderr, args...)
 	}
 }
