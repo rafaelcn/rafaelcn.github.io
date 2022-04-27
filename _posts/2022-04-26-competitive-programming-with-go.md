@@ -70,7 +70,7 @@ func D(args ...interface{}) {
 }
 ```
 
-# Examples
+# Example
 
 Considering the boilerplate above, the following code will read a input of this
 <a href="https://codeforces.com/contest/1646/problem/B)">problem</a>.
@@ -102,10 +102,9 @@ func main() {
 	}
 
 	writer.Flush()
-
 }
 ```
 
 At the end of the day you gonna get our input read correctly and whenever you
 want to write something the output it will be flushed before the end of the
-program.
+program. On a future post I'll show some use cases of this template.
