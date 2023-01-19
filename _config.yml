@@ -3,8 +3,6 @@ navigation:
   url: /
 - text: about
   url: /about.html
-- text: presentations
-  url: /presentations.html
 
 
 defaults:
