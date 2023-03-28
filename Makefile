@@ -10,4 +10,8 @@ docker_build:
 	docker build -t rafael-blog .
 
 docker_run: docker_build
-	docker run --network=host -it rafael-blog
+	docker run --network=host -v ./:/blog/ -it rafael-blog
+
+docker_bare_run:
+	docker run --network=host -v ./:/blog/ -it rafael-blog
+
