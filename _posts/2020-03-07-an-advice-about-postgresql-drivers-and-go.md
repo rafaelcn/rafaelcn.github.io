@@ -9,12 +9,11 @@ snippet: Connection pools implementations on Go PostgreSQL drivers are scarse, i
 
 A few weeks ago I was trying to implement a service that I had on Heroku to use
 as few connections as possible to the database as they limit the number of
-connections to 20 on a free dynamo.
-
-At that time I was using the _lib/pq_ driver and it  doesn't implement any kind
-of connection pooling but that would not be a problem as I would close every
-unused connection after use, so I thought. The implementation of get a
-connection and do stuff with it is shown in following code.
+connections to 20 on a free dynamo. At that time I was using the _lib/pq_ driver
+and it  doesn't implement any kind of connection pooling but that would not be a
+problem as I would close every unused connection after use, so I thought. The
+implementation of get a connection and do stuff with it is shown in following
+code.
 
 ``` go
 import (
@@ -49,11 +48,10 @@ func Query(query string, arguments []interface{}) {
 The problem with this approach is that the connection with the database on the
 heroku instance isn't closed as defined in the defer. I really don't know why
 and I didn't checked with the support directly, although I had a written
-question on [SO](https://stackoverflow.com/questions/60196656/closing-database-connections-on-heroku) about it.
-
-I was mesmerized. Why it does work on the localhost but it doesn't on a dyno
-instance? But I was quite excited to solve the problem and so I turned myself
-to look after a solution.
+question on [SO](https://stackoverflow.com/questions/60196656/closing-database-connections-on-heroku)
+about it. I was mesmerized. Why it does work on the localhost but it doesn't on
+a dyno  instance? But I was quite   excited to solve the problem and so I turned
+myself to look after a solution.
 
 # PGBouncer
 
