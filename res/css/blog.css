@@ -1,5 +1,6 @@
 body {
-    font-family: Open Sans, Helvetica, Roboto, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
+    color:rgb(55, 55, 55)
 }
 
 main {
@@ -7,7 +8,6 @@ main {
 }
 
 nav {
-    opacity: .6;
     padding-top: .5rem;
 
     transition: all .100s;
@@ -16,23 +16,8 @@ nav {
     padding-right: 1.25rem;
 }
 
-nav:hover {
-    opacity: 1;
-}
-
 footer {
     height: 300px;
-    color: whitesmoke;
-    padding: 0 !important;
-    background: rgba(39, 174, 96, 1) !important;
-}
-
-footer a {
-    color: whitesmoke;
-}
-
-footer a:hover {
-    color: rgba(30, 30, 30, 1);
 }
 
 footer ul > li {
@@ -42,54 +27,53 @@ footer ul > li {
     margin-right: 12px;
 }
 
-footer > * {
-    background: rgba(39, 174, 96, 1) !important;
-}
-
 a {
-    color: rgba(39,174,96,1);
-
     transition: all .100s;
+    color: rgb(3, 51, 23);
 }
 
 a:hover {
-    color: rgba(48, 112, 87, 1);
+    color: rgb(8, 77, 36);
 }
 
 a.navbar-item, a.navbar-item.is-active {
     font-weight: 200;
     font-size: 1.5rem;
-    color: rgb(30, 30, 30);
+    color: rgb(60, 60, 60);
+
+    padding-bottom: 0 !important;
 
     transition: all .08s;
 }
 
 a.navbar-item:hover {
-    color: rgb(40, 40, 40);
+    color: rgb(20, 20, 20);
     cursor: pointer;
-}
-
-a.navbar-item.is-active {
-    font-weight: 500;
 }
 
 .navbar-end {
     cursor: pointer;
 }
 
-.navbar-end:hover {
-    background: rgb(200, 200, 200, .1);
+.navbar-end > span.navbar-item {
+    padding-bottom: 0 !important;
 }
 
 .blog-post {
-    border-radius: 3px;
-    padding: 1.25rem 2.5rem 1.25rem 1.5rem;
-
     transition: all .05s;
 }
 
 .blog-post:hover {
     background: rgb(200, 200, 200, .1);
+    border-radius: 3px;
+}
+
+.blog-post > a {
+    color: rgb(3, 51, 23);
+}
+
+.blog-post > a > div {
+    padding: 1rem 1rem 1rem 1rem !important;
 }
 
 .blog-info {
@@ -104,19 +88,4 @@ a.navbar-item.is-active {
 
 .post-title {
     font-weight: 200;
-}
-
-.post-social-button {
-    border: 0;
-    background: 0;
-    color: rgba(39, 174, 96, 1);
-    border-radius: 3px;
-    cursor: pointer;
-    font-size: 1.5rem;
-
-    transition: all .100s;
-}
-
-.post-social-button:hover {
-    color: rgba(48, 112, 87, 1);
 }

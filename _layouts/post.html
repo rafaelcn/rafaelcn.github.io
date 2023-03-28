@@ -4,17 +4,11 @@ layout: default
 
 <link rel="stylesheet" type="text/css" href="/res/css/post.min.css">
 
-<div class="post-content box">
-  <header class="post-header">
+<div class="post-content">
+  <header class="post-header ml-4 mr-4">
     <h1 class="post-title">
       {{ page.title }}
     </h1>
-
-    <ul class="">
-        <li><button id="fb-share" class="post-social-button p-1"><i class="fab fa-facebook-square"></i></button></li>
-        <li><button id="tt-share" class="post-social-button p-1"><i class="fab fa-twitter"></i></button></li>
-        <li><button id="in-share" class="post-social-button p-1"><i class="fab fa-linkedin"></i></button></li>
-    </ul>
 
     {% assign publish_language = 'nil' %}
     {% if page.language == 'portuguese' %}
@@ -22,12 +16,12 @@ layout: default
     {% else %}
         {% assign publish_language = 'Published on ' %}
     {% endif %}
-    <h5 class="post-date has-text-right is-size-6 mt-5">
+    <h5 class="post-date is-size-6">
       {{ page.date | date_to_long_string }}
     </h5>
   </header>
 
-  <div class="post-text mt-6">
+  <div class="post-text mt-6 ml-4 mr-4">
     {{ content }}
 
     <div class="has-text-centered mt-6" id="disqus-activation-area">
@@ -39,42 +33,6 @@ layout: default
     <div id="disqus_thread"></div>
   </div>
 
-  <script>
-    var fb_button = document.getElementById('fb-share')
-    var in_button = document.getElementById('in-share')
-    var tt_button = document.getElementById('tt-share')
-
-    fb_button.onclick = function() {
-      facebook_share('rafaelcn.github.io/{{page.url}}', '{{page.title}}', "{{page.snippet}}", '', '520', '350')
-    }
-
-    in_button.onclick = function() {
-      linkedin_share('rafaelcn.github.io/{{page.url}}', '{{page.title}}', "{{page.snippet}}")
-    }
-
-    tt_button.onclick = function() {
-      window.open("https://twitter.com/intent/tweet?text={{page.title}}+rafaelcn.github.io{{page.url}}+by+@rafaellnunees")
-    }
-
-    function facebook_share(url, title, desc, image, width, height) {
-      var win_top = (screen.height / 2) - (width / 2)
-      var win_left = (screen.width / 2) - (height / 2)
-      window.open('http://www.facebook.com/sharer.php?s=100&p[title]=' + title + '&p[summary]=' + desc + '&p[url]=' + url + '&p[images][0]=' + image, 'sharer', 'top=' + win_top + ',left=' + win_left + ',toolbar=0,status=0,width='+width+',height='+height);
-    }
-
-    function linkedin_share(url, title, desc) {
-      window.open('https://www.linkedin.com/shareArticle?mini=true&url='+ url +'&title='+ title + '&summary='+ desc +'&source=');
-    }
-
-    // post-title auto size if too big (not quite right yet)
-    let t = document.getElementsByClassName('post-title')[0]
-    let s = t.innerHTML.trim().split(' ').join('').length
-    let w = t.innerHTML.trim().split(' ').length
-
-    if (s >= 23) {
-      t.style.fontSize = w * 17 + 'px'
-    }
-  </script>
   <script>
     var disqus_config = function () {
         this.page.title = '{{ page.title }}'

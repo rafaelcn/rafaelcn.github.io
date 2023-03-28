@@ -72,7 +72,7 @@ function clear(element) {
 
 init()
 
-document.getElementById('toggle-button')
+document.getElementById('theme-toggle')
         .addEventListener('click', function() {
             toggleTheme()
         })

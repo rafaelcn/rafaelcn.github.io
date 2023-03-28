@@ -56,7 +56,7 @@
             </a>
           </div>
           <div class="navbar-menu" id="navbar">
-            <div class="navbar-start">
+            <div class="navbar-start pt-4">
               {% for link in site.navigation %}
                 {% assign current = nil %}
                 {% if link.url == page.url or page.layout == link.layout %}
@@ -74,7 +74,7 @@
           </div>
         </nav>
 
-        <div class="container mt-6 mb-6" id="content">
+        <div class="ml-4 mr-4 mt-6 mb-6" id="content">
             {{ content }}
         </div>
 

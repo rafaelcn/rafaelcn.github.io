@@ -7,30 +7,34 @@ title: Blog
 <ul class="blog-posts">
   {% for post in site.posts %}
     <li class="blog-post">
-      <h5 class="blog-info">
-        <span class="post-date">
-          {{ post.date | date_to_long_string }}
-        </span>
-        <span class="post-language">
-          {% assign Language = 'nil' %}
-          {% assign Title = 'nil' %}
-          {% if post.language == 'portuguese' %}
-              {% assign Title = 'Este artigo está escrito em Português' %}
-              {% assign Language = 'PT' %}
-          {% else %}
-            {% assign Title='This article is written in English' %}
-            {% assign Language = 'EN' %}
-          {% endif %}
-          <i class="fa fa-language" title="{{ Title }}" style="font-size: 1.0rem;margin-right: 3px;"></i>
-          {{ Language }}
-        </span>
-      </h5>
-      <h2>
-        <a class="post-title is-size-3" href="{{ post.url }}">{{ post.title }}</a>
-      </h2>
-      <h4 class="post-snippet">
-        {{ post.snippet }}
-      </h4>
+      <a href="{{ post.url }}">
+        <div>
+          <h5 class="blog-info">
+            <span class="post-date">
+              {{ post.date | date_to_long_string }}
+            </span>
+            <span class="post-language">
+              {% assign Language = 'nil' %}
+              {% assign Title = 'nil' %}
+              {% if post.language == 'portuguese' %}
+                  {% assign Title = 'Este artigo está escrito em Português' %}
+                  {% assign Language = 'PT' %}
+              {% else %}
+                {% assign Title='This article is written in English' %}
+                {% assign Language = 'EN' %}
+              {% endif %}
+              <i class="fa fa-language" title="{{ Title }}" style="font-size: 1.0rem;margin-right: 3px;"></i>
+              {{ Language }}
+            </span>
+          </h5>
+          <h2>
+            <span class="post-title is-size-3">{{ post.title }}</span>
+          </h2>
+          <h4 class="post-snippet">
+            {{ post.snippet }}
+          </h4>
+        </div>
+      </a>
     </li>
   {% endfor %}
 
