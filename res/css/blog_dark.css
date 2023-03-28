@@ -16,6 +16,10 @@
     background: rgb(30, 30, 30) !important;
 }
 
+.dark-mode hr {
+    background-color: rgba(245, 245, 245, .2) !important;
+}
+
 .dark-mode .fa,
 .dark-mode .far,
 .dark-mode .fab,
@@ -28,12 +32,12 @@
     background: rgb(30, 30, 30) !important;
 }
 
-.dark-mode a:hover {
+.dark-mode a {
     color: rgb(66, 202, 123) !important;
 }
 
-.dark-mode #license:hover {
-    color: rgb(255, 255, 255) !important;
+.dark-mode a:hover {
+    color: rgb(66, 202, 123) !important;
 }
 
 .dark-mode .box {
@@ -54,11 +58,7 @@
 }
 
 .dark-mode .post-date {
-    color: whitesmoke !important;
-}
-
-.dark-mode .presentation-post {
-    color: whitesmoke !important;
+    color: rgba(245, 245, 245, .7) !important;
 }
 
 .dark-mode .list-social > li > a {
