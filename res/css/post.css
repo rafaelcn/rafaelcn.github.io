@@ -34,6 +34,12 @@
 /* Bulma/Prism overrides for code */
 
 pre {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 3px !important;
+}
+
+code {
     border-radius: 3px !important;
 }
 

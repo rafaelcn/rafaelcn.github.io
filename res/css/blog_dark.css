@@ -103,6 +103,10 @@
     color: rgba(47, 239, 135, 1);
 }
 
+.dark-mode div.highlight > pre {
+    background-color: rgba(30, 30, 30, 0.5) !important;
+}
+
 .dark-mode span.token.function {
     color: rgba(251, 67, 105, 1);
 }
