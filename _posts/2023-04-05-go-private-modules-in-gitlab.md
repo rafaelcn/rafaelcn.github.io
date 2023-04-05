@@ -14,10 +14,10 @@ module is under some group, `go get` can't find it.
 Of course, setting up your go env variables such as GONOPROXY, GONOSUMDB,
 GOPRIVATE and GOPROXY will be helpful it doesn't solve the issue. And yep, it
 bugs my mind about this problem and it seems that we have quite a  long history
-about it. The (issue)[https://gitlab.com/gitlab-org/gitlab-foss/-/issues/37832]
+about it. The [issue](https://gitlab.com/gitlab-org/gitlab-foss/-/issues/37832)
 that tracked  the problem is currently closed and it is 5 years old. Well,
 someone on the from  the Gitlab organization created another
-(issue)[https://gitlab.com/gitlab-org/gitlab/-/issues/321864] to document the
+[issue](https://gitlab.com/gitlab-org/gitlab/-/issues/321864) to document the
 available workarounds, though I'm only familiar with two.
 
 The first one is simply to define your module with a `.git` suffix. For
