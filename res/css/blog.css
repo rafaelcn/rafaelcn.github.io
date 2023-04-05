@@ -37,10 +37,6 @@ a:hover {
     color: rgb(8, 77, 36);
 }
 
-p > a {
-    color: rgb(6, 59, 28);
-}
-
 a.navbar-item, a.navbar-item.is-active {
     font-weight: 200;
     font-size: 1.5rem;
