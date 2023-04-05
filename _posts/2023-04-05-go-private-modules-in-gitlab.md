@@ -23,7 +23,7 @@ available workarounds, though I'm only familiar with two.
 The first one is simply to define your module with a `.git` suffix. For
 instance, the following module will be found.
 
-```
+``` go
 module gitlab.com/organization/group/module-name.git
 
 go 1.19
