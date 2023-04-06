@@ -52,6 +52,10 @@ a.navbar-item:hover {
     cursor: pointer;
 }
 
+button {
+    font-family: 'Courier New', Courier, monospace;
+}
+
 .navbar-end {
     cursor: pointer;
 }
