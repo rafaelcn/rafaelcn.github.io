@@ -1,6 +1,9 @@
 body {
-    font-family: 'Courier New', Courier, monospace;
     color:rgb(55, 55, 55)
+}
+
+body, button, input, optgroup, select, textarea {
+    font-family: 'Courier New', Courier, monospace;
 }
 
 main {
@@ -50,10 +53,6 @@ a.navbar-item, a.navbar-item.is-active {
 a.navbar-item:hover {
     color: rgb(20, 20, 20);
     cursor: pointer;
-}
-
-button {
-    font-family: 'Courier New', Courier, monospace !important;
 }
 
 .navbar-end {
