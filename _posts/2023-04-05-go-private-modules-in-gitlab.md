@@ -18,10 +18,9 @@ about it. The [issue](https://gitlab.com/gitlab-org/gitlab-foss/-/issues/37832)
 that tracked  the problem is currently closed and it is 5 years old. Well,
 someone on the from  the Gitlab organization created another
 [issue](https://gitlab.com/gitlab-org/gitlab/-/issues/321864) to document the
-available workarounds, though I'm only familiar with two.
-
-The first one is simply to define your module with a `.git` suffix. For
-instance, the following module will be found.
+available workarounds, though I'm only familiar with two. The first one is
+simply to define your module with a `.git` suffix. For instance, the following
+module will be found.
 
 ``` go
 module gitlab.com/organization/group/module-name.git
@@ -34,5 +33,7 @@ require (
 ```
 
 The other one is to use an access token with the `api`, `read_repository`
-scopes. I wrote this hoping it will be helpful to someone and also to solidify
-this problem in my head.
+scopes. That's quite simple but I personally don't think it's a good solution
+because if you are working with other people your package will still be
+inaccessible unless they setup their own access token. I wrote this hoping it
+will be helpful to someone and also to solidify this problem in my head.
