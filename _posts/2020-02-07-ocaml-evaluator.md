@@ -3,6 +3,7 @@ layout: post
 title: Avaliador de expressões
 language: portuguese
 snippet:
+draft: true
 ---
 
 # Introdução
