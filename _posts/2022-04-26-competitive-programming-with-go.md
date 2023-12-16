@@ -24,13 +24,15 @@ to be read.
 
 Some other Go templates address this issue a bit differently when reading arrays
 like reading a string and then spliting it, converting it to whatever type the
-problem needs and finally it tried to solve the problem. The following example
-is much simpler.
+problem needs and finally it tried to solve the problem. But I think the 
+following example is much simpler.
 
 # The template
 
 The source code provided here is a simple template that can be used whenever
-you are looking to solve a problem with Golang.
+you are looking to solve a problem with Golang that accounts for speed when
+printing data. A buffered output is the way to **go** as it will be much faster
+than printing each answer individually.
 
 ``` go
 package main
