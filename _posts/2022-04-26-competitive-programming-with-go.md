@@ -108,7 +108,7 @@ func main() {
 }
 ```
 
-At the end of the day you gonna get our input read correctly and whenever you
+At the end of the day you gonna get your input read correctly and whenever you
 want to write something the output it will be flushed before the end of the
 program.
 
