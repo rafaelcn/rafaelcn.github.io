@@ -1,6 +1,6 @@
 FROM ruby:2.5
 
-LABEL maintainer Rafael C. Nunes <rafaelnunes@engineer.com>
+LABEL maintainer Rafael C. Nunes <rcamposnunes@outlook.com>
 
 RUN apt update
 RUN apt install jekyll -y
