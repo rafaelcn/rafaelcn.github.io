@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Go private modules in Gitlab
-snippet: Why go get isn't working on a module that's under a project in Gitlab?
+snippet: Why go get isn't working on a module that's under a private project in Gitlab?
 language: english
 published: true
 ---
