@@ -1,6 +1,6 @@
-FROM ruby:2.5
+FROM ruby:3.4
 
-LABEL maintainer Rafael C. Nunes <rcamposnunes@outlook.com>
+LABEL maintainer="Rafael Campos Nunes <rcamposnunes@outlook.com>"
 
 RUN apt update
 RUN apt install jekyll -y
