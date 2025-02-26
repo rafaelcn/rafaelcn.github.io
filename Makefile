@@ -3,15 +3,13 @@
 # and also make the start of the server easier.
 #
 
+IMAGE_NAME=rafaelcn.github.io
+
 all:
 	bundle exec jekyll serve
 
-docker_build:
-	docker build -t rafael-blog .
+docker-build:
+	docker build -t $(IMAGE_NAME) .
 
-docker_run: docker_build
-	docker run --network=host -v ./:/blog/ -it rafael-blog
-
-docker_bare_run:
-	docker run --network=host -v ./:/blog/ -it rafael-blog
-
+docker-run: docker-build
+	docker run --network=host -v ./:/blog/ -it $(IMAGE_NAME) 
