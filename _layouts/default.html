@@ -35,6 +35,9 @@
       <link rel="stylesheet" href="/res/css/prism.min.css">
       <link rel="stylesheet" href="/res/css/prism_dark.min.css">
 
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
       {% if page.layout == "post" or page.url == "/404" %}
           {% include mathjax.html %}
@@ -56,7 +59,7 @@
             </a>
           </div>
           <div class="navbar-menu" id="navbar">
-            <div class="navbar-start pt-4">
+            <div class="navbar-start">
               {% for link in site.navigation %}
                 {% assign current = nil %}
                 {% if link.url == page.url or page.layout == link.layout %}
@@ -77,9 +80,8 @@
         <div class="ml-4 mr-4 mt-6 mb-6" id="content">
             {{ content }}
         </div>
-
       </main>
-      <footer class="footer">
+      <footer>
         <div class="has-text-centered">
           <hr>
           <ul>
@@ -90,7 +92,7 @@
           </ul>
         </div>
 
-        <p class="has-text-centered mt-6">
+        <p class="has-text-centered mt-6 pb-1">
           <a class="" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
             <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
           </a><br>
