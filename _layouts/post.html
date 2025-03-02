@@ -23,42 +23,5 @@ layout: default
 
   <div class="post-text mt-6 ml-4 mr-4">
     {{ content }}
-
-    <div class="has-text-centered mt-6" id="disqus-activation-area">
-      <button class="button is-default is-light" id="disqus-activation">
-        <i class="fa fa-comments mr-3" aria-hidden="true"></i>
-        What are people's thoughts on this?
-      </button>
-    </div>
-
-    <div id="disqus_thread"></div>
   </div>
-
-  <script>
-    var disqus_config = function () {
-        this.page.title = '{{ page.title }}'
-        this.page.url = 'http://rafaelcn.github.io{{ page.url }}';
-        this.page.identifier = '{{ page.title }}'
-    };
-
-    let activation = function() {
-        var d = document, s = d.createElement('script');
-
-        s.src = '//rafaelcngithubio.disqus.com/embed.js';
-
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    };
-
-    // on click load diqus
-    let disqus_button = document.getElementById('disqus-activation')
-
-    disqus_button.onclick = function() {
-        disqus_button.style.display = "none"
-        //document.getElementById('disqus-activation-area').style.display = "none"
-
-        activation()
-    }
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
