@@ -12,10 +12,13 @@
 *.tar
 *.zip
 
-# Folders #
-############
+#
+# Folders
+#
 _site/
 
-# Files #
-# #######
+#
+# Files
+#
 *.lock
+.DS_Store
