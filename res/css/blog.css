@@ -1,9 +1,22 @@
 body {
-    color:rgb(55, 55, 55);
+    color: rgb(30, 30, 30) !important;
 }
 
-body, button, input, optgroup, select, textarea {
-    font-family: 'Courier New', Courier, monospace;
+body,
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: "Rubik", serif;
+    font-weight: 400 !important;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "EB Garamond", serif;
+    font-weight: bold;
 }
 
 main {
@@ -11,9 +24,9 @@ main {
 }
 
 nav {
-    padding-top: .5rem;
+    padding-top: 0.5rem;
 
-    transition: all .100s;
+    transition: all 0.1s;
 
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -25,14 +38,14 @@ footer {
 }
 
 footer ul > li {
-    font-size: 5rem;
+    font-size: 3rem;
     display: inline-block;
     margin-left: 12px;
     margin-right: 12px;
 }
 
 a {
-    transition: all .100s;
+    transition: all 0.1s;
     color: rgb(4, 68, 31);
 }
 
@@ -40,18 +53,16 @@ a:hover {
     color: rgb(8, 77, 36);
 }
 
-a.navbar-item, a.navbar-item.is-active {
-    font-weight: 200;
-    font-size: 1.5rem;
-    color: rgb(60, 60, 60);
+a.navbar-item,
+a.navbar-item.is-active {
+    color: rgba(30, 30, 30, 0.4);
+    font-size: 1.5rem !important;
 
-    padding-bottom: 0 !important;
-
-    transition: all .08s;
+    transition: all 0.1s;
 }
 
 a.navbar-item:hover {
-    color: rgb(20, 20, 20);
+    color: rgb(30, 30, 30);
     cursor: pointer;
 }
 
@@ -59,16 +70,12 @@ a.navbar-item:hover {
     cursor: pointer;
 }
 
-.navbar-end > span.navbar-item {
-    padding-bottom: 0 !important;
-}
-
 .blog-post {
-    transition: all .05s;
+    transition: all 0.05s;
 }
 
 .blog-post:hover {
-    background: rgb(200, 200, 200, .1);
+    background: rgb(30, 30, 30, 0.1);
     border-radius: 3px;
 }
 
@@ -87,9 +94,16 @@ a.navbar-item:hover {
 
 .post-date {
     flex-grow: 1;
-    color: rgba(30, 30, 30, .4);
+    color: rgba(30, 30, 30, 0.4);
 }
 
 .post-title {
-    font-weight: 200;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 1023px) {
+    .navbar-menu {
+        background-color: inherit !important;
+        box-shadow: none !important;
+    }
 }
