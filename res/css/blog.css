@@ -72,11 +72,11 @@ a.navbar-item:hover {
 
 .blog-post {
     transition: all 0.05s;
+    border-radius: 3px;
 }
 
 .blog-post:hover {
     background: rgb(30, 30, 30, 0.1);
-    border-radius: 3px;
 }
 
 .blog-post > a {
