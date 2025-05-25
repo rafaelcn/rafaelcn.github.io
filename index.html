@@ -1,36 +1,30 @@
 ---
-layout: default
+layout: crude
 title: Blog
 ---
 
-<ul class="blog-posts">
-  {% for post in site.posts %}
-    {% if post.draft == false %}
-        <li class="blog-post">
-            <a href="{{ post.url }}">
+<ul class="space-y-5 lg:space-y-1">
+    {% for post in site.posts %} {% if post.draft == false %}
+    <li>
+        <a href="{{ post.url }}" class="group">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:space-x-3">
+                <span
+                    class="w-[100px] lowercase shrink-0 text-left text-black/20 group-hover:text-black transition-colors duration-0"
+                    >{{ post.date | date_to_string }}</span
+                >
                 <div>
-                    <h5 class="blog-info">
-                        <span class="post-date">
-                        {{ post.date | date_to_long_string }}
-                        </span>
-                    </h5>
-                    <h2>
-                        <span class="post-title">{{ post.title }}</span>
-                    </h2>
-                    <h4 class="post-snippet">
-                        {{ post.snippet }}
-                    </h4>
+                    <h1 class="text-2xl font-serif font-semibold">
+                        {{ post.title }}
+                    </h1>
+                    <p class="">{{ post.snippet }}</p>
                 </div>
-            </a>
-        </li>
-    {% endif %}
-  {% endfor %}
-
-  {% capture posts_number %}{{ site.posts | size }}{% endcapture %}
-
-  {% if posts_number == '0' %}
-    <li class="no-post">
-      <h2>No posts found, yet. Comeback later. <i class="fa fa-smile-o"></i></h2>
+            </div>
+        </a>
     </li>
-  {% endif %}
+    {% endif %} {% endfor %} {% capture posts_number %}{{ site.posts | size }}{%
+    endcapture %} {% if posts_number == '0' %}
+    <li class="no-post">
+        <h2>No posts found, yet. Comeback later.</h2>
+    </li>
+    {% endif %}
 </ul>
