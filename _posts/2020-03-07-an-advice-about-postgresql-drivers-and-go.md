@@ -16,32 +16,35 @@ implementation of get a connection and do stuff with it is shown in following
 code.
 
 ``` go
+package database
+
 import (
     ...
 )
 
-var (
-    instance *db.SQL
-)
-
-func getConn() {
-    if instance == nil {
-
-    }
-
-    return instance
+type Database struct {
+	instance *sql.DB
 }
 
-func Query(query string, arguments []interface{}) {
-    conn, err := getConn()
+func New() (*Database, error) {
+	db, err := sql.Open("postgres", "...")
+	if err != nil {
+		return nil, err
+	}
 
+	return &Database{
+		instance: db
+	}, nil
+}
+
+func (d *Database) Query(query string, arguments []interface{}) {
+    rows, err := d.instance.Query(query, arguments...)
     if err != nil {
-
+    	fmt.Fprintf(os.Stderr, "failed to acquirer database connection, reason %v", err)
     }
-    defer conn.Close()
+    defer rows.Close()
 
-    // do important stuff with the acquired connection that will be closed on
-    // the end return of the function
+    // do important things with the data...
 }
 ```
 
@@ -95,23 +98,20 @@ import (
 )
 
 var (
-    connection *pgxpool.Pool
+    pool *pgxpool.Pool
 )
 
 func main() {
-    // remember to define the DATABASE_URL env
     pool, err = pgxpool.Connect(context.Background(), os.Getenv("DATABASE_URL"))
-
     if err != nil {
-        log.Fatalf("Couldn't connect to the database. Reason %v", err)
+        fmt.Fprintf(os.Stderr, "failed to connect to the database, reason %v", err)
     }
     defer conn.Close(context.Background())
 
     // A query then could be used with an acquired connection
-    conn, err := connection.Acquire(context.Background())
-
+    conn, err := pool.Acquire(context.Background())
     if err != nil {
-        log.Printf("Couldn't get a connection with the database. Reason %v", err)
+        fmt.Fprintf(os.Stdout, "failed to get a connection with the database, reason %v", err)
     } else {
         // release the connection to the pool after using it
         defer conn.Release()
@@ -122,7 +122,7 @@ func main() {
         results, err := conn.Query(context.Background(), query, arguments...)
 
         if err != nil {
-            log.Printf("Couldn't execute query. Reason %v", err)
+            fmt.Fprintf("Couldn't execute query. Reason %v", err)
         } else {
             // show the results boy, you got it.
         }
