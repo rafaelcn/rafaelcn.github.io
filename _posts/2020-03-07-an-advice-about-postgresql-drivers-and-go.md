@@ -130,6 +130,7 @@ func main() {
 
 }
 ```
+
 As you can clearly see, a connection pool is initialized and any following
 queries to the database can be done with little connections from that pool,
 using the `Acquire` method.
@@ -147,11 +148,10 @@ solution to the problem.
 
 In fact, the pgx driver has a substantial increase in performance than the
 alternatives on some cases due to [specific things](https://github.com/jackc/pgx/blob/master/README.md)
-(see the performance section) that I won't mention over here.
-
-All in all the usage of pgx was quite clear to me, contrary to the usage of
-pgbouncer and <insert any other pgsql driver here>. I could just use it without
-having to worry about two different, or possible more, cogs working together.
+(see the performance section) that I won't mention over here. All in all the
+usage of pgx was quite clear to me, contrary to the usage of pgbouncer and
+\<insert any other pgsql driver here\>. I could just use it without having to
+worry about two different, or possible more, cogs working together.
 
 So in the end I vote for *pgx*, for its clear and documented API, has nice
 features such as database types and connection pool, amongst others.
