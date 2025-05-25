@@ -80,18 +80,18 @@
     <body class="pl-3 pr-3 xl:pr-0 xl:pl-0 max-w-6xl mx-auto h-screen">
         <div class="min-h-full" id="wrapper">
             <nav class="mb-5 mt-5">
-                <div class="pb-5 pt-5 flex items-center space-x-6 md:text-xl rounded-md">
-                    <span class="text-5xl">&xi;</span>
+                <div class="pb-5 pt-5 flex items-center space-x-6 text-xl rounded-md">
+                    <span class="text-5xl select-none">&xi;</span>
                     <ul class="flex space-x-4">
                         {% for link in site.navigation %}
                         {% assign current = nil %}
                         {% if link.url == page.url or page.layout == link.layout %}
-                            {% assign current = 'is-active' %}
+                            {% assign current = '' %}
                         {% endif %}
                         {% if page.layout == "post" and link.text == "blog" %}
-                            {% assign current = 'is-active' %}
+                            {% assign current = '' %}
                         {% endif %}
-                        <li><a class="" href="{{ link.url }}">{{ link.text }}</a></li>
+                        <li><a class="{{current}}" href="{{ link.url }}">{{ link.text }}</a></li>
                         {% endfor %}
                     </ul>
                 </div>
