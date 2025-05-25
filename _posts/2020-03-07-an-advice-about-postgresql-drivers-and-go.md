@@ -40,7 +40,7 @@ func New() (*Database, error) {
 func (d *Database) Query(query string, arguments []interface{}) {
     rows, err := d.instance.Query(query, arguments...)
     if err != nil {
-    	fmt.Fprintf(os.Stderr, "failed to acquirer database connection, reason %v", err)
+    	fmt.Fprintf(os.Stderr, "failed to query the database, reason %v", err)
     }
     defer rows.Close()
 
