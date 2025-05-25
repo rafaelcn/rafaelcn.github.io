@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ page.title }}</title>
+
+        <!-- Mobile kind of support -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <!-- SEO -->
+        <meta name="description" content="Rafael's blog on computers and other stuff">
+
+        {% if page.layout == "post" %}
+            <meta property="og:title" content="Rafael's blog - {{ page.title }}">
+        {% else %}
+            <meta property="og:title" content="Rafael's blog">
+        {% endif %}
+        <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+        <meta property="og:image" content="{{ site.url }}/res/img/github_profile.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:description" content="Rafael's blog on computers and other stuff">
+
+        <link rel="shortcut icon" href="https://rafaelcn.github.io/res/img/github_profile.png" type="image/x-icon">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
+        <link rel="stylesheet" href="res/css/fonts.min.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <style type="text/tailwindcss">
+            @theme {
+            --font-serif: "EB Garamond";
+            --font-sans: "Rubik", system-ui, ui-sans-serif, sans-serif,
+                "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            }
+
+            pre {
+                @apply mt-8 mb-8 text-base;
+            }
+
+            pre > code {
+                @apply rounded-md border border-black;
+            }
+
+            code {
+                @apply pl-1 pr-1 bg-stone-50/80;
+            }
+
+            #post-content > p {
+                @apply mb-5;
+            }
+            #post-content > p > a {
+                @apply text-blue-500 hover:text-blue-600;
+            }
+
+            #post-content > h1 {
+                @apply mt-3 mb-1 font-semibold text-3xl;
+            }
+            #post-content > h2 {
+                @apply mt-3 mb-1 font-semibold text-2xl;
+            }
+            #post-content > h3 {
+                @apply mt-3 mb-1 font-semibold text-xl;
+            }
+
+            #post-content > h1::before {
+                content: '# ';
+            }
+
+            #post-content > p > img {
+                text-align: center;
+                border-radius: 3px;
+            }
+
+            #post-content > ol {
+                @apply ml-3 list-decimal list-inside;
+            }
+            #post-content > ul {}
+        </style>
+    </head>
+
+    <body class="pl-3 pr-3 xl:pr-0 xl:pl-0 max-w-6xl mx-auto h-screen">
+        <div class="min-h-full" id="wrapper">
+            <nav class="mb-5 mt-5">
+                <div class="pb-5 pt-5 flex items-center space-x-6 md:text-xl rounded-md">
+                    <span class="text-5xl">&xi;</span>
+                    <ul class="flex space-x-4">
+                        {% for link in site.navigation %}
+                        {% assign current = nil %}
+                        {% if link.url == page.url or page.layout == link.layout %}
+                            {% assign current = 'is-active' %}
+                        {% endif %}
+                        {% if page.layout == "post" and link.text == "blog" %}
+                            {% assign current = 'is-active' %}
+                        {% endif %}
+                        <li><a class="" href="{{ link.url }}">{{ link.text }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </nav>
+            <main class="mb-5" id="content">
+                <div class="">{{ content }}</div>
+            </main>
+        </div>
+        <footer class="mt-10 border-t border-black">
+            <div class="mt-10 flex flex-col column content-center items-left">
+              <a class="" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+                <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+              </a>
+              <p>
+                  This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" id="license">Creative Commons Attribution Non Commercial 4.0 International License</a>
+              </p>
+            </div>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+        <script type="text/javascript">
+          hljs.highlightAll();
+        </script>
+    </body>
+</html>
