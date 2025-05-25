@@ -82,8 +82,8 @@ code to traverse the list on the list implementation, and doing that is good
 because you separate responsability.
 
 Those iterators could have more properties which help even more the act of
-writing good software as **size**, the first pointer denoted as **begin** and
-the last element denoted by a pointer with the name **end**. The final structure
+writing good software as `size`, the first pointer denoted as `begin` and
+the last element denoted by a pointer with the name `end`. The final structure
 would look like:
 
 ``` c
