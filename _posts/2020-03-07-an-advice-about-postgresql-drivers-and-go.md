@@ -111,7 +111,7 @@ func main() {
     // A query then could be used with an acquired connection
     conn, err := pool.Acquire(context.Background())
     if err != nil {
-        fmt.Fprintf(os.Stdout, "failed to get a connection with the database, reason %v", err)
+        fmt.Fprintf(os.Stderr, "failed to get a connection with the database, reason %v", err)
     } else {
         // release the connection to the pool after using it
         defer conn.Release()
@@ -122,7 +122,7 @@ func main() {
         results, err := conn.Query(context.Background(), query, arguments...)
 
         if err != nil {
-            fmt.Fprintf("Couldn't execute query. Reason %v", err)
+            fmt.Fprintf(os.Stderr, "failed to execute query, reason %v", err)
         } else {
             // show the results boy, you got it.
         }
