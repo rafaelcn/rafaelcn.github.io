@@ -1,36 +1,55 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" />
         <title>{{ page.title }}</title>
 
         <!-- Mobile kind of support -->
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+        />
 
         <!-- SEO -->
-        <meta name="description" content="Rafael's blog on computers and other stuff">
+        <meta
+            name="description"
+            content="Rafael's blog on computers and other stuff"
+        />
 
         {% if page.layout == "post" %}
-            <meta property="og:title" content="Rafael's blog - {{ page.title }}">
+        <meta property="og:title" content="Rafael's blog - {{ page.title }}" />
         {% else %}
-            <meta property="og:title" content="Rafael's blog">
+        <meta property="og:title" content="Rafael's blog" />
         {% endif %}
-        <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-        <meta property="og:image" content="{{ site.url }}/res/img/github_profile.png">
-        <meta property="og:image:type" content="image/png">
-        <meta property="og:description" content="Rafael's blog on computers and other stuff">
+        <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+        <meta
+            property="og:image"
+            content="{{ site.url }}/res/img/github_profile.png"
+        />
+        <meta property="og:image:type" content="image/png" />
+        <meta
+            property="og:description"
+            content="Rafael's blog on computers and other stuff"
+        />
 
-        <link rel="shortcut icon" href="https://rafaelcn.github.io/res/img/github_profile.png" type="image/x-icon">
+        <script src="/res/js/tailwindcss-4.1.7.js"></script>
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
-        <link rel="stylesheet" href="res/css/fonts.min.css">
+        <link
+            rel="shortcut icon"
+            href="https://rafaelcn.github.io/res/img/github_profile.png"
+            type="image/x-icon"
+        />
 
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"
+        />
+        <link rel="stylesheet" href="res/css/fonts.min.css" />
+
         <style type="text/tailwindcss">
             @theme {
-            --font-serif: "EB Garamond";
-            --font-sans: "Rubik", system-ui, ui-sans-serif, sans-serif,
-                "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+                --font-serif: "EB Garamond";
+                --font-sans: "Rubik", system-ui, ui-sans-serif, sans-serif;
             }
 
             pre {
@@ -63,7 +82,7 @@
             }
 
             #post-content > h1::before {
-                content: '# ';
+                content: "# ";
             }
 
             #post-content > p > img {
@@ -77,43 +96,49 @@
         </style>
     </head>
 
-    <body class="pl-3 pr-3 xl:pr-0 xl:pl-0 max-w-6xl mx-auto h-screen">
+    <body class="pl-4 pr-4 xl:pr-0 xl:pl-0 max-w-6xl mx-auto h-screen">
         <div class="min-h-full" id="wrapper">
-            <nav class="mb-5 mt-5">
-                <div class="pb-5 pt-5 flex items-center space-x-6 text-xl rounded-md">
-                    <span class="text-5xl select-none">&xi;</span>
-                    <ul class="flex space-x-4">
-                        {% for link in site.navigation %}
-                        {% assign current = nil %}
-                        {% if link.url == page.url or page.layout == link.layout %}
-                            {% assign current = '' %}
-                        {% endif %}
-                        {% if page.layout == "post" and link.text == "blog" %}
-                            {% assign current = '' %}
-                        {% endif %}
-                        <li><a class="{{current}}" href="{{ link.url }}">{{ link.text }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </div>
+            <nav class="mb-5 mt-5 pb-5 pt-5">
+                <ul class="flex items-center space-x-4 text-xl">
+                    <li class="mr-5 text-5xl select-none">&xi;</li>
+                    {% for link in site.navigation %} {% assign current = nil %}
+                    {% if link.url == page.url or page.layout == link.layout %}
+                    {% assign current = '' %} {% endif %} {% if page.layout ==
+                    "post" and link.text == "blog" %} {% assign current = '' %}
+                    {% endif %}
+                    <li>
+                        <a class="{{current}}" href="{{ link.url }}"
+                            >{{ link.text }}</a
+                        >
+                    </li>
+                    {% endfor %}
+                </ul>
             </nav>
-            <main class="mb-5" id="content">
-                <div class="">{{ content }}</div>
-            </main>
+            <main class="mb-5" id="content">{{ content }}</main>
         </div>
-        <footer class="mt-10 border-t border-black">
-            <div class="mt-10 flex flex-col column content-center items-left">
-              <a class="" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
-                <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
-              </a>
-              <p>
-                  This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" id="license">Creative Commons Attribution Non Commercial 4.0 International License</a>
-              </p>
+        <footer class="mt-10 border-t-2 border-black">
+            <div class="flex flex-col">
+                <div id="contact" class="flex justify-end">{{site.email}}</div>
+                <div id="license" class="mt-15">
+                    <a
+                        class=""
+                        rel="license"
+                        href="http://creativecommons.org/licenses/by-nc/4.0/"
+                    >
+                        <img
+                            alt="Creative Commons License"
+                            src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"
+                        />
+                        This work is licensed under a Creative Commons
+                        Attribution Non Commercial 4.0 International License
+                    </a>
+                </div>
             </div>
         </footer>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
         <script type="text/javascript">
-          hljs.highlightAll();
+            hljs.highlightAll();
         </script>
     </body>
 </html>
