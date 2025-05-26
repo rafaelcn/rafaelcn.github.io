@@ -119,18 +119,7 @@
             <div class="flex flex-col">
                 <div id="contact" class="flex justify-end">{{site.email}}</div>
                 <div id="license" class="mt-15">
-                    <a
-                        class=""
-                        rel="license"
-                        href="http://creativecommons.org/licenses/by-nc/4.0/"
-                    >
-                        <img
-                            alt="Creative Commons License"
-                            src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"
-                        />
-                        This work is licensed under a Creative Commons
-                        Attribution Non Commercial 4.0 International License
-                    </a>
+                    &#169; <span id="license-date"></span> - Rafael Campos Nunes
                 </div>
             </div>
         </footer>
@@ -138,6 +127,11 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
         <script type="text/javascript">
             hljs.highlightAll();
+
+            let d = new Date().getFullYear();
+            let e = document.getElementById("license-date");
+
+            e.innerHTML = d;
         </script>
     </body>
 </html>
