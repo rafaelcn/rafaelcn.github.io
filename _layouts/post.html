@@ -4,14 +4,16 @@ layout: crude
 
 <div class="">
     <header class="" id="post-header">
-        <h1 class="text-5xl md:text-6xl lg:text-7xl font-serif font-bold">
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-serif font-semibold">
             {{ page.title }}
         </h1>
         {% assign publish_language = 'nil' %} {% if page.language ==
         'portuguese' %} {% assign publish_language = 'Publicado em ' %} {% else
         %} {% assign publish_language = 'Published on ' %} {% endif %}
-        <p class="text-black/20 mt-3 text-right">
-            {{ page.date | date_to_long_string }}
+        <p class="text-black/20 text-right mt-5 mb-5">
+            <span class="select-none">
+                {{ page.date | date_to_long_string }}
+            </span>
         </p>
     </header>
 
