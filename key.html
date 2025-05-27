@@ -1,0 +1,84 @@
+---
+layout: crude
+title: Key
+---
+
+<div>
+    <p>
+        If you wanna send me a private message, use this
+        <a href="/assets/keys/public.asc" target="_blank" class="link">key.</a>
+    </p>
+    <div class="flex flex-col items-center mt-15">
+        <div
+            class="font-mono select-none max-h-150 overflow-hidden"
+            id="key"
+        ></div>
+        <div class="flex grow">
+            <div class="grow"></div>
+            <div
+                class="p-2 px-15 flex text-white bg-black hover:bg-black/80 rounded-md select-none cursor-pointer"
+                id="key-copy"
+            >
+                COPY KEY
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var key = "";
+        let keye = document.getElementById("key");
+        let button = document.getElementById("key-copy");
+
+        button.addEventListener("click", () => {
+            try {
+                check();
+                copy();
+            } catch (error) {
+                console.log("no permissions to copy");
+            }
+        });
+
+        async function copy() {
+            await navigator.clipboard.writeText(key);
+        }
+
+        async function check() {
+            let isFirefox = navigator.userAgent.includes("Firefox");
+
+            const write = isFirefox
+                ? "granted"
+                : await navigator.permissions.query({
+                      name: "clipboard-write",
+                  });
+
+            return write.state === "granted";
+        }
+
+        async function init() {
+            let request = fetch("/assets/keys/public.asc", {
+                cache: "no-store",
+            })
+                .then((r) => r.text())
+                .catch((e) => {
+                    console.error("failed to fetch for the key");
+                });
+
+            request.then((k) => {
+                key = k;
+                var parts = k.split("\n");
+
+                for (i in parts) {
+                    let node = document.createElement("p");
+                    var opacity = 1 - (i / parts.length) * 3;
+
+                    node.classList += "opacity-[" + opacity + "]";
+                    node.innerHTML = parts[i];
+
+                    keye.appendChild(node);
+                }
+            });
+        }
+
+        init();
+    </script>
+</div>
