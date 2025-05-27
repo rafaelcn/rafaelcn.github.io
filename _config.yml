@@ -1,11 +1,12 @@
-email: rcamposnunes@outlook.com
+contact:
+  key: 76BA EB4A C747 CE5E 35EC  9539 BDC5 D501 0803 154E
+  email: rcamposnunes@outlook.com
 
 navigation:
-- text: blog
-  url: /
-- text: about
-  url: /about.html
-
+  - text: blog
+    url: /
+  - text: about
+    url: /about.html
 
 defaults:
   - scope:
