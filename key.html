@@ -9,11 +9,8 @@ title: Key
         <a href="/assets/keys/public.asc" target="_blank" class="link">key</a>
         or copy the key to your clipboard using the button below.
     </p>
-    <div class="flex flex-col items-center mt-15">
-        <div
-            class="font-mono select-none max-h-150 overflow-hidden"
-            id="key"
-        ></div>
+    <div class="flex flex-col items-center mt-15 overflow-hidden">
+        <div class="font-mono select-none max-h-150" id="key"></div>
         <div class="flex grow">
             <div class="grow"></div>
             <div
@@ -81,8 +78,7 @@ title: Key
                     let node = document.createElement("p");
                     var opacity = 1 - (i / parts.length) * 2.5;
 
-                    node.classList =
-                        "px-10 opacity-[" + opacity + "] overflow-hidden";
+                    node.classList = "px-10 opacity-[" + opacity + "]";
                     node.innerHTML = parts[i];
 
                     if (opacity >= 0 && parts[i].length > 0) {
