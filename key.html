@@ -5,8 +5,9 @@ title: Key
 
 <div>
     <p>
-        If you wanna send me a private message, use this
-        <a href="/assets/keys/public.asc" target="_blank" class="link">key.</a>
+        If you wanna send me a private message, you can download this
+        <a href="/assets/keys/public.asc" target="_blank" class="link">key</a>
+        or copy the key to your clipboard using the button below.
     </p>
     <div class="flex flex-col items-center mt-15">
         <div
@@ -16,7 +17,7 @@ title: Key
         <div class="flex grow">
             <div class="grow"></div>
             <div
-                class="p-2 px-15 flex text-white bg-black hover:bg-black/80 rounded-md select-none cursor-pointer"
+                class="p-2 px-15 text-white bg-black hover:bg-black/80 rounded-md select-none cursor-pointer"
                 id="key-copy"
             >
                 COPY KEY
@@ -40,6 +41,11 @@ title: Key
 
         async function copy() {
             await navigator.clipboard.writeText(key);
+
+            button.innerHTML = "YAAAAY &check;";
+            window.setTimeout(() => {
+                button.innerHTML = "COPY KEY";
+            }, 3000);
         }
 
         async function check() {
