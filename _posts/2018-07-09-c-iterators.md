@@ -20,11 +20,9 @@ The post on linkedin can be found
 Everything is possible in C, just like shooting your foot using it.
 But I'm here to report a little experiment I've been doing trying to minimize
 the amount of work I have to do just to iterate a list or any list data
-structure for that matter.
-
-Is true that many people entering programming these days
-are accustomed with the nice syntactic sugar and expressiveness of other
-languages.
+structure for that matter. Is true that many people entering programming
+these days are accustomed with the nice syntactic sugar and expressiveness
+of other languages.
 
 Iterators in C are easy to use and using it you feel aproximatelly the same way
 if you were using Java or C++, just less safe, more error prone and
