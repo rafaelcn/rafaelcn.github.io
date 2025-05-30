@@ -50,22 +50,14 @@
             }
 
             pre {
-                @apply text-base;
+                @apply text-base mb-3 mt-3;
             }
-
             pre > code {
                 @apply rounded-md border border-stone-300;
             }
 
             code {
                 @apply px-[8px] py-[1px] bg-stone-100 border border-stone-300 rounded-md;
-            }
-
-            #post-content > p ~ p {
-                @apply mb-5;
-            }
-            #post-content > p > a {
-                @apply text-blue-500 hover:text-blue-600;
             }
 
             #post-content > h1 {
@@ -82,10 +74,15 @@
                 content: "# ";
             }
 
+            #post-content > p ~ p {
+                @apply mb-5;
+            }
+            #post-content > p > a {
+                @apply text-blue-500 hover:text-blue-600;
+            }
             #post-content > p > img {
                 @apply text-center rounded-md mt-10 mb-10;
             }
-
             #post-content > ol {
                 @apply ml-3 list-decimal list-inside;
             }
