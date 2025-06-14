@@ -69,9 +69,15 @@
             #post-content > h3 {
                 @apply mt-2 mb-1 font-semibold text-xl;
             }
+            #post-content > h1 {
+                @apply hover:text-blue-500 cursor-pointer;
+            }
 
             #post-content > h1::before {
+                @apply text-xl;
+
                 content: "# ";
+                vertical-align: 15%;
             }
 
             #post-content > p ~ p {
