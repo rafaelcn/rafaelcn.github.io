@@ -6,10 +6,10 @@
 IMAGE_NAME=rafaelcn.github.io
 
 all:
-	bundle exec jekyll serve
+	bundle exec jekyll serve --host=0.0.0.0
 
 docker-build:
 	docker build -t $(IMAGE_NAME) .
 
 docker-run: docker-build
-	docker run --network=host -v ./:/blog/ -it $(IMAGE_NAME) 
+	docker run --network=host -v ./:/blog/ -it $(IMAGE_NAME)
